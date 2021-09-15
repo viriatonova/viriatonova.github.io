@@ -41,7 +41,7 @@
             <div class="mt-12 text-white">
                 <div class="flex flex-col md:flex-row justify-start items-center">
                     <img class="w-36 h-36 rounded-full shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
-                    <h2 class="mt-6 md:mt-0 text-4xl font-bold md:ml-4">Olá,<br>Eu sou Viriato Nova</h2>
+                    <h2 class="mt-10 md:mt-6 lg:mt-0 text-4xl font-bold md:ml-4">Olá,<br>Eu sou Viriato Nova</h2>
                 </div>
                 <div class="mt-6" id="present" style="font-family: 'Ubuntu Mono', monospace;"></div>
                 <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
@@ -73,21 +73,25 @@
         </section>
 
         <!--js section-->
-        <section id="js" class="w-full h-screen grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-2">
-            <article class="w-auto h-auto mt-4 flex flex-col justify-center items-center bg-gray-500 rounded-2xl">
-                <div class="w-full h-auto p-4">
-                    <h2 class="text-xl font-semibold self-start mt-4">IMC Calculadora</h2>
-                    <div id="resultado" class="w-auto h-16 flex items-center justify-center mt-4 px-4 bg-gray-700 rounded-lg">
-                        Resultado
-                    </div>
-                    <form id="imcform" action="." class="flex flex-col mt-4 space-y-2">
-                        <label for="altura">Altura</label>
-                        <input id="altura" class="rounded-md" name="altura" type="text">
-                        <label for="peso">Peso</label>
-                        <input id="peso" class="rounded-md" name="peso" type="text">
-                    </form>
-                    <button type="submit" class="w-1/2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
+        <section id="js" class="w-full h-screen">
+            <article class="w-full md:w-1/3 flex flex-col justify-start items-start">
+                <h2 class="text-xl font-semibold self-start mt-4">Calculadora de IMC</h2>
+                <div  class="w-full h-16 flex items-center justify-start mt-4 px-4 bg-purple-900 rounded-lg">
+                    <p class="w-2/5 h-full flex justify-center items-center border-r-1 border-white text-2xl font-semibold">IMC = </p>
+                    <div id="result" class="w-3/5 flex justify-center"></div>
                 </div>
+                <div class="w-full py-2 flex mt-2 border border-white rounded-lg">
+                    <p>Faixa de IMC</p>
+                    <div id="tipresult" class="w-3/4"></div>
+                </div>
+                <form id="imcform" action="." class="w-full flex flex-col mt-4 space-y-2">
+                    <label for="altura">Altura</label>
+                    <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="altura" type="text" placeholder="   Ex.: 1.80">
+                    <label for="peso">Peso</label>
+                    <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="peso" type="text" placeholder="   Ex.: 80">
+                    <button type="submit" class="w-1/2 py-2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
+                </form>
+                
             </article>
             <article class="w-auto h-auto mt-4 flex flex-col justify-center items-center bg-gray-500 rounded-2xl">
                 
