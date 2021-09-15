@@ -1,28 +1,67 @@
+main();
+
+
 function main () {
-    // capturando o evento de submit
-    const form = document.querySelector('#imcform');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const inputAltura = event.target.querySelector('#altura');
-        const inputPeso = event.target.querySelector('#peso');
-        const altura = Number(inputAltura.value);
-        const peso = Number(inputPeso.value);
 
-       if (!altura) {
-            setResult('Valor da Altura Invalido');
-            return;
-       }
 
-       if (!peso) {
-            setResult('Valor do Peso Invalido');
-            return;
-       }
+     /**
+     * @param {array} classesTailwind add classes css
+     * @param {string} idElement id da html tag
+     */
+      function createP () {
+        const p = document.createElement('p');
+        p.classList.add('text-lg', 'font-medium');
+        return p
+        }
 
-       const imc = getImc(peso, altura);
-       setResult(imc);
-       setTipResult(imc);
+        // add anos 
+        const ano = new Date();
+        const idade = ano.getFullYear() - 1982;
+
+        let anodev = ano.getFullYear() - 2021
+
+        if ( anodev <= 0 ) {
+            anodev = 2021;
+        } else {
+            anodev = 2021 + anodev;  
+        }
         
-    });
+        const frase1 = `Sou soteropolitano, tenho ${idade} anos e resido em Palmeiras-Ba.
+        Tenho formação em engenharia civil e trabalho com desenvolvimento web
+        desde o início de ${anodev}.`;
+        const presentSobre = document.querySelector('#present');
+        const p1 = createP();
+        p1.innerHTML = frase1;
+        presentSobre.appendChild(p1);
+
+    
+        /** 
+        * Capitura o evento padrão do formulário 
+        */
+        const form = document.querySelector('#imcform');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const inputAltura = event.target.querySelector('#altura');
+            const inputPeso = event.target.querySelector('#peso');
+            const altura = Number(inputAltura.value);
+            const peso = Number(inputPeso.value);
+
+            if (!altura) {
+                    setResult('Valor da Altura Invalido');
+                    return;
+            }
+
+            if (!peso) {
+                    setResult('Valor do Peso Invalido');
+                    return;
+            }
+
+            const imc = getImc(peso, altura);
+            setResult(imc);
+            setTipResult(imc);
+        
+        });
 
     function getImc(peso, altura) {
         const imc = peso / (altura**2);
@@ -62,5 +101,6 @@ function main () {
         tipResult.appendChild(p2);
     }
 }
-main();
+
+
 
