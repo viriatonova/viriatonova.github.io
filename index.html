@@ -13,6 +13,7 @@
     <title>Viriato Nova</title>
 </head>
 <body class="w-full h-full flex bg-gradient-to-b from-purple-700 via-purple-600 to-purple-500 bg-no-repeat text-white" style="font-family: 'Ubuntu', sans-serif;"> 
+
     <aside id="menu" class="w-auto h-screen px-4 md:px-6 fixed flex flex-col justify-start items-center 
     space-y-12 filter blur-5xl bg-black bg-opacity-20 border-r border-light-white border-opacity-30 rounded-r-3xl">
         <button class="flex md:hidden mt-12">
@@ -24,7 +25,7 @@
             <a class="hover:text-pink-600" href="#js">JS</a>
             <a class="hover:text-pink-600" href="#django">Django</a>
         </nav>
-        <div class="flex flex-col md:absolute md:bottom-12 space-y-16 md:space-y-12" >
+        <div class="flex flex-col md:absolute md:bottom-12 space-y-16 md:space-y-8 xl:space-y-12" >
             <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 4.png" alt=""></a>
             <a href="https://github.com/viriatonova" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 6.png" alt=""></a>
             <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 7.png" alt=""></a>
@@ -32,8 +33,11 @@
             <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-auto h-4 md:h-6" src="images/outline_email_white_24dp.png" alt=""></a>
         </div>
     </aside>
+
     <main class="w-full h-full ml-16 md:ml-28 px-4">
-        <section id="sobre" class="w-full h-screen grid grid-cols-1 md:grid-cols-2 gap-10 justify-start">
+
+        <!--sobre section-->
+        <section id="sobre" class="w-full h-full md:h-screen grid grid-cols-1 md:grid-cols-2 gap-10 justify-start">
             <div class="mt-12 text-white">
                 <div class="flex flex-col md:flex-row justify-start items-center">
                     <img class="w-36 h-36 rounded-full shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
@@ -41,7 +45,7 @@
                 </div>
                 <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
                     Sou soteropolitano, tenho 39 anos e resido em Palmeiras-Ba.
-                    Tenho formação em engenharia e trabalho com desenvolvimento web
+                    Tenho formação em engenharia civil e trabalho com desenvolvimento web
                     desde o início de 2021. <br>
                     <br>
                     Trabalhei em diversas áreas da engenharia, mas minha principal atuação
@@ -57,7 +61,7 @@
 
                 </p>
             </div>
-            <div class="mt-20 text-white">
+            <div class="mt-2 md:mt-20 text-white">
                 <h2 class="text-4xl font-bold">Portiflio & Atividades</h2>
                 <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
                     Na barra lateral apresento alguns projetos pessoais e algumas referências
@@ -70,16 +74,48 @@
             </div>
            
         </section>
-        <section id="js" class="w-full h-screen grid grid-cols-2 gap-10 justify-start">
-            <article class="">
-                <h2 class="text-xl font-semibold">IMC Calculadora</h2>
 
+        <!--js section-->
+        <section id="js" class="w-full h-screen grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-2">
+            <article class="w-auto h-auto mt-4 flex flex-col justify-center items-center bg-gray-500 rounded-2xl">
+                <div class="w-full h-auto p-4">
+                    <h2 class="text-xl font-semibold self-start mt-4">IMC Calculadora</h2>
+                    <div id="resultado" class="w-auto h-16 flex items-center justify-center mt-4 px-4 bg-gray-700 rounded-lg">
+                        Resultado
+                    </div>
+                    <form id="imcform" action="." class="flex flex-col mt-4 space-y-2">
+                        <label for="altura">Altura</label>
+                        <input id="altura" class="rounded-md" name="altura" type="text">
+                        <label for="peso">Peso</label>
+                        <input id="peso" class="rounded-md" name="peso" type="text">
+                    </form>
+                    <button type="submit" class="w-1/2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
+                </div>
+            </article>
+            <article class="w-auto h-auto mt-4 flex flex-col justify-center items-center bg-gray-500 rounded-2xl">
+                <div class="w-full h-auto p-4">
+                    <h2 class="text-xl font-semibold self-start mt-4">IMC Calculadora</h2>
+                    <div id="resultado" class="w-auto h-16 flex items-center justify-center mt-4 px-4 bg-gray-700 rounded-lg">
+                        Resultado
+                    </div>
+                    <form id="imcform" action="." class="flex flex-col mt-4 space-y-2">
+                        <label for="altura">Altura</label>
+                        <input id="altura" class="rounded-md" name="altura" type="text">
+                        <label for="peso">Peso</label>
+                        <input id="peso" class="rounded-md" name="peso" type="text">
+                    </form>
+                    <button type="submit" class="w-1/2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
+                </div>
             </article>
         </section>
+
+        <!--django section-->
         <section id="django" class="w-full h-screen grid grid-cols-2 gap-10 justify-start">
             <h2 class="text-xl font-semibold">Stricto</h2>
         </section>
+
     </main>
+    <script src="main.js"></script>
 </body>
 
 </html>
