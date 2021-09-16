@@ -15,51 +15,32 @@ title: ViriatoNova
         rel="stylesheet">
     <title>{{ page.title }}</title>
 </head>
-<body class="w-full h-screen bg-gray-900 text-white" style="font-family: 'Ubuntu', sans-serif;"> 
+<body class="w-full h-full bg-gray-900 text-white" style="font-family: 'Ubuntu', sans-serif;"> 
     <div class="w-full h-full flex flex-col lg:container mx-auto">
 
         {% include header.html %}
 
-        <main class="w-full h-full flex my-4">
+        <main class="w-full h-full flex my-6 px-6">
 
-            <section class="w-3/4 h-auto pr-12 flex flex-col justify-start">
-                <!--js section-->
-                <article id="js" class="w-full h-auto">
-                    <div class="w-full md:w-1/3 flex flex-col justify-start items-start">
-                        <h2 class="text-xl font-semibold self-start mt-4">Calculadora de IMC</h2>
-                        <div  class="w-full h-16 flex items-center justify-start mt-4 px-4 bg-purple-900 rounded-lg">
-                            <p class="w-2/5 h-full flex justify-center items-center border-r-1 border-white text-2xl font-semibold">IMC = </p>
-                            <div id="result" class="w-3/5 flex justify-center"></div>
-                        </div>
-                        <div class="w-full py-2 flex mt-2 border border-white rounded-lg">
-                            <p>Faixa de IMC</p>
-                            <div id="tipresult" class="w-3/4"></div>
-                        </div>
-                        <form id="imcform" action="." class="w-full flex flex-col mt-4 space-y-2">
-                            <label for="altura">Altura</label>
-                            <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="altura" type="text" placeholder="   Ex.: 1.80">
-                            <label for="peso">Peso</label>
-                            <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="peso" type="text" placeholder="   Ex.: 80">
-                            <button type="submit" class="w-1/2 py-2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
-                        </form>
-                        
+            <section class="w-4/5 h-auto pr-12 my-6 flex flex-col justify-start">
+                {% for post in site.posts %}
+                <article class="w-full h-auto flex flex-col justify-center items-start">
+                    <a class="w-full font-black pb-2 text-2xl text-purple-700 tracking-wide self-star border-b-4 border-purple-900" href="{{ post.url }}">{{ post.title }}</a>
+                    <div class="w-full h-auto pt-4 flex justify-start items-start">
+                        <div class="w-auto h-auto py-px px-2  text-white text-base font-light">{{ post.date | date: '%B %d, %Y' }}</div>
+                        <div class="w-auto h-auto py-px px-2 bg-pink-500 text-white text-base font-light rounded-2xl">{{ post.tag }}</div>
                     </div>
+                    <p class="mt-12 font-light text-body tracking-wide">{{ post.content }}</p>
                 </article>
+                {% endfor %}
             </section>
 
-            <aside class="w-1/4 h-auto flex flex-col justify-center">
+            <aside class="w-1/5 h-auto flex flex-col justify-center">
                 <article id="sobre" class="w-full h-full flex flex-col justify-center">
-                    <div class="flex flex-col md:flex-row justify-start items-center">
-                        <img class="w-36 h-36 rounded-full shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
-                        <h2 class="mt-10 md:mt-6 lg:mt-0 text-4xl font-bold md:ml-4">Olá,<br>Eu sou Viriato Nova</h2>
+                    <div class="flex flex-col justify-start items-center">
+                        <img class="w-full h-auto rounded-lg shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
+                        <h2 class="w-full mt-4 pb-2 text-2xl font-semibold border-b border-purple-900 self-start" >Olá,<br>Eu sou Viriato Nova</h2>
                     </div>
-                    <ul class="flex justify-start items-center space-x-10 mt-12" >
-                        <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-auto h-2 md:h-6" src="/assents/images/iconsAtivo 4.png" alt=""></a>
-                        <a href="https://github.com/viriatonova" target="_blank"><img class="w-auto h-2 md:h-6" src="/assents/images/iconsAtivo 6.png" alt=""></a>
-                        <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-2 md:h-6" src="/assents/images/iconsAtivo 7.png" alt=""></a>
-                        <a href="https://www.instagram.com/viriato_nova/" target="_blank"><img class="w-auto h-2 md:h-6" src="/assents/images/iconsAtivo 5.png" alt=""></a>
-                        <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-auto h-2 md:h-6" src="/assents/images/outline_email_white_24dp.png" alt=""></a>
-                    </ul>
                     <div class="mt-6" id="present" style="font-family: 'Ubuntu Mono', monospace;"></div>
                     <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
                         Trabalhei em diversas áreas da engenharia, mas minha principal atuação
