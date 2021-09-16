@@ -12,99 +12,82 @@
         rel="stylesheet">
     <title>Viriato Nova</title>
 </head>
-<body class="w-full h-full flex bg-gradient-to-b from-purple-700 via-purple-600 to-purple-500 bg-no-repeat text-white" style="font-family: 'Ubuntu', sans-serif;"> 
+<body class="w-full h-full  bg-gray-900 text-white" style="font-family: 'Ubuntu', sans-serif;"> 
+    <div class="flex flex-col md:container mx-auto">
 
-    <aside id="menu" class="w-auto h-screen px-4 md:px-6 fixed flex flex-col justify-start items-center 
-    space-y-12 filter blur-5xl bg-black bg-opacity-20 border-r border-light-white border-opacity-30 rounded-r-3xl">
-        <button class="flex md:hidden mt-12">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-        </button>
-        <nav class="hidden md:flex flex-col mt-12 text-center text-white text-medium font-normal space-y-4 tracking-widest relative" 
-        style="font-family: 'Ubuntu Mono', monospace;">
-            <a class="font-bold text-xl hover:text-pink-600" href="#sobre">SOBRE</a>
-            <a class="hover:text-pink-600" href="#js">JS</a>
-            <a class="hover:text-pink-600" href="#django">Django</a>
+        <nav id="menu" class="w-full h-auto py-4 px-6 flex filter blur-5xl bg-purple-700 bg-opacity-20">
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <ul class="flex items-center space-x-12 text-white text-medium font-normal tracking-widest" 
+            style="font-family: 'Ubuntu Mono', monospace;">
+                <a class="font-bold text-xl hover:text-pink-600" href="#sobre">SOBRE</a>
+                <a class="hover:text-pink-600" href="#js">JS</a>
+                <a class="hover:text-pink-600" href="#django">Django</a>
+            </nav>
+            
         </nav>
-        <div class="flex flex-col md:absolute md:bottom-12 space-y-16 md:space-y-8 xl:space-y-12" >
-            <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 4.png" alt=""></a>
-            <a href="https://github.com/viriatonova" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 6.png" alt=""></a>
-            <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 7.png" alt=""></a>
-            <a href="https://www.instagram.com/viriato_nova/" target="_blank"><img class="w-auto h-4 md:h-6" src="images/iconsAtivo 5.png" alt=""></a>
-            <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-auto h-4 md:h-6" src="images/outline_email_white_24dp.png" alt=""></a>
-        </div>
-    </aside>
 
-    <main class="w-full h-full ml-16 md:ml-28 px-4">
+        <main class="w-full h-full flex my-12">
+            <aside class="w-1/4 flex flex-col justify-center">
 
-        <!--sobre section-->
-        <section id="sobre" class="w-full h-full md:h-screen grid grid-cols-1 md:grid-cols-2 gap-10 justify-start">
-            <div class="mt-12 text-white">
-                <div class="flex flex-col md:flex-row justify-start items-center">
-                    <img class="w-36 h-36 rounded-full shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
-                    <h2 class="mt-10 md:mt-6 lg:mt-0 text-4xl font-bold md:ml-4">Olá,<br>Eu sou Viriato Nova</h2>
-                </div>
-                <div class="mt-6" id="present" style="font-family: 'Ubuntu Mono', monospace;"></div>
-                <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
-                    Trabalhei em diversas áreas da engenharia, mas minha principal atuação
-                    foi em projetos. Ainda trabalho como projetista estrutural independente 
-                    e consultor técnico em pequenas obras. <br>
-                    <br>
-                    Comecei no desenvolvimento web como trainee de aplicações
-                    web usando Django e Docker na plataforma Gitlab.<br/>
-                    <br/>
-                    Minhas minhas principais competências são:<br/>
-                    
-                    Python | Django | HTML | CSS | JavaScript 
+                <article id="sobre" class="w-full h-full flex flex-col justify-center">
+                    <div class="flex flex-col md:flex-row justify-start items-center">
+                        <img class="w-36 h-36 rounded-full shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
+                        <h2 class="mt-10 md:mt-6 lg:mt-0 text-4xl font-bold md:ml-4">Olá,<br>Eu sou Viriato Nova</h2>
+                    </div>
+                    <ul class="flex justify-start items-center space-x-10 mt-12" >
+                        <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-auto h-2 md:h-6" src="images/iconsAtivo 4.png" alt=""></a>
+                        <a href="https://github.com/viriatonova" target="_blank"><img class="w-auto h-2 md:h-6" src="images/iconsAtivo 6.png" alt=""></a>
+                        <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-2 md:h-6" src="images/iconsAtivo 7.png" alt=""></a>
+                        <a href="https://www.instagram.com/viriato_nova/" target="_blank"><img class="w-auto h-2 md:h-6" src="images/iconsAtivo 5.png" alt=""></a>
+                        <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-auto h-2 md:h-6" src="images/outline_email_white_24dp.png" alt=""></a>
+                    </ul>
+                    <div class="mt-6" id="present" style="font-family: 'Ubuntu Mono', monospace;"></div>
+                    <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
+                        Trabalhei em diversas áreas da engenharia, mas minha principal atuação
+                        foi em projetos. Ainda trabalho como projetista estrutural independente 
+                        e consultor técnico em pequenas obras. <br>
+                        <br>
+                        Comecei no desenvolvimento web como trainee de aplicações
+                        web usando Django e Docker na plataforma Gitlab.<br/>
+                        <br/>
+                        Minhas minhas principais competências são:<br/>
+                        
+                        Python | Django | HTML | CSS | JavaScript 
 
-                </p>
-            </div>
-            <div class="mt-2 md:mt-20 text-white">
-                <h2 class="text-4xl font-bold">Portiflio & Atividades</h2>
-                <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
-                    Na barra lateral apresento alguns projetos pessoais e algumas referências
-                    de projetos que participei como Dev.<br/>
-                    <br/>
-                    Para além do trabalho de desenvolvedor apresento também um site de jornalismo
-                    que mantenho atuando como jornalista e desenvolvedor.
+                    </p>
+                </article>
 
-                </p>
-            </div>
-           
-        </section>
+            </aside>
 
-        <!--js section-->
-        <section id="js" class="w-full h-screen">
-            <article class="w-full md:w-1/3 flex flex-col justify-start items-start">
-                <h2 class="text-xl font-semibold self-start mt-4">Calculadora de IMC</h2>
-                <div  class="w-full h-16 flex items-center justify-start mt-4 px-4 bg-purple-900 rounded-lg">
-                    <p class="w-2/5 h-full flex justify-center items-center border-r-1 border-white text-2xl font-semibold">IMC = </p>
-                    <div id="result" class="w-3/5 flex justify-center"></div>
-                </div>
-                <div class="w-full py-2 flex mt-2 border border-white rounded-lg">
-                    <p>Faixa de IMC</p>
-                    <div id="tipresult" class="w-3/4"></div>
-                </div>
-                <form id="imcform" action="." class="w-full flex flex-col mt-4 space-y-2">
-                    <label for="altura">Altura</label>
-                    <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="altura" type="text" placeholder="   Ex.: 1.80">
-                    <label for="peso">Peso</label>
-                    <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="peso" type="text" placeholder="   Ex.: 80">
-                    <button type="submit" class="w-1/2 py-2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
-                </form>
-                
-            </article>
-            <article class="w-auto h-auto mt-4 flex flex-col justify-center items-center bg-gray-500 rounded-2xl">
-                
-                
-            </article>
-        </section>
+            <section class="w-3/4 h-auto px-12 flex flex-col justify-start">
+                <!--js section-->
+                <article id="js" class="w-full h-auto">
+                    <div class="w-full md:w-1/3 flex flex-col justify-start items-start">
+                        <h2 class="text-xl font-semibold self-start mt-4">Calculadora de IMC</h2>
+                        <div  class="w-full h-16 flex items-center justify-start mt-4 px-4 bg-purple-900 rounded-lg">
+                            <p class="w-2/5 h-full flex justify-center items-center border-r-1 border-white text-2xl font-semibold">IMC = </p>
+                            <div id="result" class="w-3/5 flex justify-center"></div>
+                        </div>
+                        <div class="w-full py-2 flex mt-2 border border-white rounded-lg">
+                            <p>Faixa de IMC</p>
+                            <div id="tipresult" class="w-3/4"></div>
+                        </div>
+                        <form id="imcform" action="." class="w-full flex flex-col mt-4 space-y-2">
+                            <label for="altura">Altura</label>
+                            <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="altura" type="text" placeholder="   Ex.: 1.80">
+                            <label for="peso">Peso</label>
+                            <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black" name="peso" type="text" placeholder="   Ex.: 80">
+                            <button type="submit" class="w-1/2 py-2 my-4 text-lg bg-purple-900 rounded-md">Calcular</button>
+                        </form>
+                        
+                    </div>
+                </article>
+            </section>
+        </main>
 
-        <!--django section-->
-        <section id="django" class="w-full h-screen grid grid-cols-2 gap-10 justify-start">
-            <h2 class="text-xl font-semibold">Stricto</h2>
-        </section>
-
-    </main>
+    </div>
     <script src="main.js"></script>
 </body>
 
