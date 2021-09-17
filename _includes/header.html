@@ -1,7 +1,12 @@
-<nav id="menu" class="w-full h-auto mt-4 py-4 px-6 flex border rounded-2xl border-purple-900 relative">
-    <button class="md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-    </button>
+<nav id="menuMobile" class="md:hidden w-full h-auto mx-auto py-4  items-center flex border rounded-2xl border-purple-900">
+    <ul class=" w-full h-full flex px-4">
+        <button class="ml-4">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+    </ul>
+</nav>
+
+<nav id="menu" class="hidden w-full h-auto py-4 px-6 md:flex border rounded-2xl border-purple-900 relative">
     <ul class="flex items-center space-x-12 text-medium tracking-widest font-bold text-xl " 
     style="font-family: 'Ubuntu Mono', monospace;">
         <a class="hover:text-pink-600" href="#sobre">Blog</a>
