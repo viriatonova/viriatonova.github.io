@@ -1,0 +1,30 @@
+I"|<h2 class="text-2xl font-semibold tracking-wider">Construindo uma calculadora de IMC em JavaScript</h2>
+<p class="mt-4 mb-12 text-base font-light tracking-wide leading-8">
+Este é um pequeno exercício de JavaScript. A idéia aqui é fazer um formulário que calcule o IMC
+(Indíce de Massa Corporea). O script também aponta em que faixa de IMC a pessoa está e 
+dispõe o valor do IMC em verde ou vermelho dependendo do resultado.
+</p>
+<div class="w-full border-2 border-gray-800 mb-4"></div>
+
+<div id="js" class="w-full md:w-1/3 h-full">
+    <div class="w-full h-auto flex flex-col justify-start items-start">
+        <h2 class="text-xl font-semibold self-start mt-4">Calculadora de IMC</h2>
+        <div class="w-full h-16 flex items-center justify-start mt-4 px-4 bg-purple-900 rounded-lg">
+            <p class="w-2/5 h-full flex justify-center items-center border-r-1 border-white text-2xl font-semibold">IMC = </p>
+            <div id="result" class="w-3/5 flex justify-center"></div>
+        </div>
+        <div class="w-full py-2 px-2 flex mt-4 border border-white rounded-lg">
+            <p class="w-1/2 flex justify-center items-center">Faixa de IMC</p>
+            <div id="tipResult" class="w-1/2 flex justify-center items-center"></div>
+        </div>
+        <form id="imcform" action="." class="w-full flex flex-col mt-4">
+            <label for="altura">Altura</label>
+            <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black mt-2" name="altura" type="text" placeholder="   Ex.: 1.80" />
+            <label class="mt-2" for="peso">Peso</label>
+            <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black mt-2" name="peso" type="text" placeholder="   Ex.: 80" />
+            <button type="submit" class="w-1/2 py-2 mt-4 text-lg bg-purple-900 rounded-md">Calcular</button>
+        </form>
+    </div>
+</div>
+
+:ET
