@@ -1,4 +1,4 @@
-I"<h2 class="text-2xl font-semibold tracking-wider">Construindo uma calculadora de IMC em JavaScript</h2>
+I"q<h2 class="text-2xl font-semibold tracking-wider">Construindo uma calculadora de IMC em JavaScript</h2>
 <p class="mt-4 mb-12 text-base font-light tracking-wide leading-8">
 Este é um pequeno exercício de JavaScript. A idéia aqui é fazer um formulário que calcule o IMC
 (Indíce de Massa Corporea). O script também aponta em que faixa de IMC a pessoa está e 
@@ -13,15 +13,15 @@ dispõe ela em verde ou vermelho dependendo do resultado.
             <p class="w-2/5 h-full flex justify-center items-center border-r-1 border-white text-2xl font-semibold">IMC = </p>
             <div id="result" class="w-3/5 flex justify-center"></div>
         </div>
-        <div class="w-full py-2 flex mt-4 border border-white rounded-lg">
-            <p>Faixa de IMC</p>
-            <div id="tipresult" class="w-3/4"></div>
+        <div class="w-full py-2 px-2 flex mt-4 border border-white rounded-lg">
+            <p class="w-1/2 flex justify-center items-center">Faixa de IMC</p>
+            <div id="tipResult" class="w-1/2 flex justify-center items-center"></div>
         </div>
         <form id="imcform" action="." class="w-full flex flex-col mt-4">
             <label for="altura">Altura</label>
-            <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black mt-4" name="altura" type="text" placeholder="   Ex.: 1.80" />
-            <label class=" mt-4" for="peso">Peso</label>
-            <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black mt-4" name="peso" type="text" placeholder="   Ex.: 80" />
+            <input id="altura" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black mt-2" name="altura" type="text" placeholder="   Ex.: 1.80" />
+            <label class="mt-2" for="peso">Peso</label>
+            <input id="peso" class="rounded-md border-2 focus:outline focus:border-pink-300 text-black mt-2" name="peso" type="text" placeholder="   Ex.: 80" />
             <button type="submit" class="w-1/2 py-2 mt-4 text-lg bg-purple-900 rounded-md">Calcular</button>
         </form>
     </div>

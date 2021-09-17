@@ -58,9 +58,10 @@ function main () {
         }
 
         const imc = getImc(peso, altura);
+        const msgTip = tipResult(imc);
         setResult(imc);
-        tipResult(imc);
-        setTip(tipMsn);
+        setTip(msgTip);
+        
     
     });
 
@@ -91,28 +92,18 @@ function main () {
         const tip = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade'];
         let tipMsn;
 
-        if (imc >= 30) {
-            tipMsn = tip[3];
-            return tipMsn;
-        } else if ( imc >= 25) { 
-            tipMsn = tip[2]
-            return tipMsn;
-        } else if ( imc >= 18.5) {
-            tipMsn = tip[1] 
-            return tipMsn;
-        } else if ( imc <= 18.4) {
-            tipMsn = tip[0] 
-            return tipMsn;
-        }
+        if (imc >= 30) return tip[3];
+        if ( imc >= 25) return tip[2];
+        if ( imc >= 18.5) return tip[1];
+        if ( imc <= 18.4) return tip[0];
     
     }
 
-   
 
     function setTip(msg){
         const tipResult = document.querySelector('#tipResult');
         const p3 = document.createElement('p');
-        p3.classList.add('text-base', 'font-medium');
+        p3.classList.add('text-lg', 'font-medium');
         p3.innerHTML = msg;
         tipResult.appendChild(p3);  
     }
