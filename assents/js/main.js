@@ -70,27 +70,21 @@ function main () {
         return imc.toFixed(2);
     }
 
-    function setResult (msg, isValid) {
+    function setResult (msg) {
         const result = document.querySelector('#result');
         result.innerHTML = '';
         const p2 = createP();
-        if (isValid) {
-            p2.classList.add('text-red-500', 'text-xl', 'font-semibold');
-            p2.innerHTML = msg;
-            result.appendChild(p2); 
-            return;
-        } else {
-            p2.classList.add('text-green-500', 'text-xl', 'font-semibold');
-            p2.innerHTML = msg;
-            result.appendChild(p2);
-        } 
+        p2.classList.add('text-white', 'text-xl', 'font-semibold');
+        p2.innerHTML = msg;
+        result.appendChild(p2); 
+        return;
+        
         
     }
     
     
     function tipResult (imc) {
         const tip = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade'];
-        let tipMsn;
 
         if (imc >= 30) return tip[3];
         if ( imc >= 25) return tip[2];
