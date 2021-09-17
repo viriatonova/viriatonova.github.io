@@ -59,8 +59,8 @@ function main () {
 
         const imc = getImc(peso, altura);
         setResult(imc);
-        setTipResult(imc);
-        console.log(setResult(imc));
+        tipResult(imc);
+        setTip(tipMsn);
     
     });
 
@@ -74,33 +74,50 @@ function main () {
         result.innerHTML = '';
         const p2 = createP();
         if (isValid) {
-            p2.classList.add('text-red-500', 'text-xl', );
+            p2.classList.add('text-red-500', 'text-xl', 'font-semibold');
             p2.innerHTML = msg;
             result.appendChild(p2); 
             return;
         } else {
-            p2.classList.add('text-green-500', 'text-xl', );
+            p2.classList.add('text-green-500', 'text-xl', 'font-semibold');
             p2.innerHTML = msg;
             result.appendChild(p2);
         } 
         
     }
-
-    function setTipResult (imc) {
+    
+    
+    function tipResult (imc) {
         const tip = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade'];
+        let tipMsn;
 
-        if (imc >= 30) return tip[3];
-        if ( imc >= 25) return tip[2];
-        if ( imc >= 18.5) return tip[1];
-        if ( imc <= 18.4) return tip[1];
-         
-        const tipResult = document.querySelector('#tipResult');
-        tipResult.innerHTML = 'tip';
-        const p2 = document.createElement('p');
-        p2.classList.add('text-red-500', 'text-noraml', 'font-medium');
-        p2.innerHTML = msg;
-        tipResult.appendChild(p2);
+        if (imc >= 30) {
+            tipMsn = tip[3];
+            return tipMsn;
+        } else if ( imc >= 25) { 
+            tipMsn = tip[2]
+            return tipMsn;
+        } else if ( imc >= 18.5) {
+            tipMsn = tip[1] 
+            return tipMsn;
+        } else if ( imc <= 18.4) {
+            tipMsn = tip[0] 
+            return tipMsn;
+        }
+    
     }
+
+   
+
+    function setTip(msg){
+        const tipResult = document.querySelector('#tipResult');
+        const p3 = document.createElement('p');
+        p3.classList.add('text-base', 'font-medium');
+        p3.innerHTML = msg;
+        tipResult.appendChild(p3);  
+    }
+   
+
 }
 
 
