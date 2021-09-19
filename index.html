@@ -1,5 +1,6 @@
 ---
 title: ViriatoNova
+tags:
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,7 @@ title: ViriatoNova
         rel="stylesheet">
     <title>{{ page.title }}</title>
 </head>
+<<<<<<< HEAD
 <body class="w-full h-full bg-gray-900 text-white" style="font-family: 'Ubuntu', sans-serif;"> 
     <div class="w-full h-full flex flex-col container mx-auto">
         <header class="w-full h-full mt-4 px-6">
@@ -61,6 +63,53 @@ title: ViriatoNova
         </main>
         
     </div>
+=======
+<body class="w-full h-full flex  mx-auto bg-black" style="font-family: 'Ubuntu', sans-serif;"> 
+    
+    {% include header.html %}
+    <aside id="menudesk" class="w-60 h-screen flex flex-col px-4 justify-start mt-6 bg-black fixed text-white">
+        <div class="w-full h-auto flex justify-end">
+            <button id="btmenu" class="w-auto h-auto mr-16"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+            <img class="w-20 h-auto flex rounded-2xl self-end " src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4"alt="Viriato Nova">
+        </div>
+        <div class="flex flex-col border-b border-purple-500 py-6 font-semibold text-right tracking-wider">
+            <h2 class="w-full text-3xl">Viriato Nova</h2>
+            <h2 class="w-full text-base text-gray-700 tracking-widest">Personal Blog</h2>
+        </div>
+        <nav class="w-full h-auto flex flex-col space-y-4 py-6 text-right text-sm tracking-widest font-light border-b border-purple-500">
+            <a class="hover:text-pink-600" href="#sobre">Blog</a>
+            <a class="hover:text-pink-600" href="#js">Sobre</a>
+            <a class="hover:text-pink-600" href="#django">Projetos</a>
+        </nav>
+        <div class="flex flex-col py-6 justify-center items-center border-b border-purple-500">
+            <h2 class="w-full font-semibold text-right">Tag's</h2>
+            {% if site.tags != "" %}
+                {% include collecttags.html %}
+            {% endif %}
+        </div>
+        <ul class="flex justify-center space-x-6 mt-4" >
+            <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 4.png" alt=""></a>
+            <a href="https://github.com/viriatonova" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 6.png" alt=""></a>
+            <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-4" src="/assents/images/iconsAtivo 7.png" alt=""></a>
+            <a href="https://www.instagram.com/viriato_nova/" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 5.png" alt=""></a>
+            <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-5 h-auto" src="/assents/images/email.png" alt=""></a>
+        </ul>
+    </aside>
+
+    <section class="w-auto h-full ml-0 md:ml-60 px-10 py-6 flex flex-col justify-start bg-white">
+        {% for post in site.posts %}
+        <article class="w-full h-auto mb-10 flex flex-col justify-center items-start">
+            <a class="w-full font-black pb-2 text-2xl text-purple-900 tracking-wide self-star border-b-2 border-gray-700" href="{{ post.url }}">{{ post.title }}</a>
+            <div class="w-full h-auto pt-2 flex justify-start items-start">
+                <div class="w-auto h-auto py-px px-2 text-sm font-light">{{ post.date | date: '%B %d, %Y' }}</div>
+                <div class="w-auto h-auto py-px px-2 bg-pink-500 text-base font-light rounded-2xl">{{ post.tags }}</div>
+            </div>
+            <p class="mt-12 font-light text-body tracking-wide">{{ post.content }}</p>
+        </article>
+        {% endfor %}
+    </section>
+    
+>>>>>>> layout-v.2
     <script src="/assents/js/main.js"></script>
 </body>
 
