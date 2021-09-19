@@ -16,54 +16,6 @@ tags:
         rel="stylesheet">
     <title>{{ page.title }}</title>
 </head>
-<<<<<<< HEAD
-<body class="w-full h-full bg-gray-900 text-white" style="font-family: 'Ubuntu', sans-serif;"> 
-    <div class="w-full h-full flex flex-col container mx-auto">
-        <header class="w-full h-full mt-4 px-6">
-        {% include header.html %}
-        </header>
-
-        <main class="w-full h-full flex my-6 px-6">
-
-            <section class="w-full md:w-4/5 h-auto md:pr-12 my-6 flex flex-col justify-start">
-                {% for post in site.posts %}
-                <article class="w-full h-auto flex flex-col justify-center items-start">
-                    <a class="w-full font-black pb-2 text-2xl text-purple-700 tracking-wide self-star border-b-4 border-purple-900" href="{{ post.url }}">{{ post.title }}</a>
-                    <div class="w-full h-auto pt-4 flex justify-start items-start">
-                        <div class="w-auto h-auto py-px px-2  text-white text-sm font-light">{{ post.date | date: '%B %d, %Y' }}</div>
-                        <div class="w-auto h-auto py-px px-2 bg-pink-500 text-white text-base font-light rounded-2xl">{{ post.tag }}</div>
-                    </div>
-                    <p class="mt-12 font-light text-body tracking-wide">{{ post.content }}</p>
-                </article>
-                {% endfor %}
-            </section>
-
-            <aside class="hidden w-1/5 h-auto md:flex flex-col justify-center">
-                <article id="sobre" class="w-full h-full flex flex-col justify-center">
-                    <div class="flex flex-col justify-start items-center">
-                        <img class="w-full h-auto p-2 rounded-2xl shadow-xl self-start" src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" alt="Viriato Nova">
-                        <h2 class="w-full mt-4 pb-2 text-2xl font-semibold border-b border-purple-900 self-start" >Olá,<br>Eu sou Viriato Nova</h2>
-                    </div>
-                    <div class="mt-6" id="present" style="font-family: 'Ubuntu Mono', monospace;"></div>
-                    <p class="mt-6 text-lg font-medium"style="font-family: 'Ubuntu Mono', monospace;">
-                        Trabalhei em diversas áreas da engenharia, mas minha principal atuação
-                        foi em projetos. Ainda trabalho como projetista estrutural independente 
-                        e consultor técnico em pequenas obras. <br>
-                        <br>
-                        Comecei no desenvolvimento web como trainee de aplicações
-                        web usando Django e Docker na plataforma Gitlab.<br/>
-                        <br/>
-                        Minhas minhas principais competências são:<br/>
-                        
-                        Python | Django | HTML | CSS | JavaScript 
-                    </p>
-                </article>
-            </aside>
-
-        </main>
-        
-    </div>
-=======
 <body class="w-full h-full flex  mx-auto bg-black" style="font-family: 'Ubuntu', sans-serif;"> 
     
     {% include header.html %}
@@ -109,7 +61,6 @@ tags:
         {% endfor %}
     </section>
     
->>>>>>> layout-v.2
     <script src="/assents/js/main.js"></script>
 </body>
 
