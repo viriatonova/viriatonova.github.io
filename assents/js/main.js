@@ -1,9 +1,18 @@
 main();
 
+const menudesk = document.querySelector('#menudesk');
+const btmenu = document.querySelector('#btmenu');
+const btclose = document;querySelector('#btclose');
+
+btmenu.addEventListener('click', function () {
+    menudesk.classList.remove('flex');
+    menudesk.classList.toggle('hidden');
+});
+
+
+
 
 function main () {
-
-
      /**
      * @param {array} classesTailwind add classes css
      * @param {string} idElement id da html tag
@@ -33,7 +42,6 @@ function main () {
     const p1 = createP();
     p1.innerHTML = frase1;
     presentSobre.appendChild(p1);
-
 
     /** 
     * Capitura o evento padrão do formulário 
