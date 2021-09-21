@@ -1,16 +1,8 @@
+import * as style from './style.js';
+
 main();
 
-const menudesk = document.querySelector('#menudesk');
-const btmenu = document.querySelector('#btmenu');
-const btclose = document;querySelector('#btclose');
-
-btmenu.addEventListener('click', function () {
-    menudesk.classList.remove('flex');
-    menudesk.classList.toggle('hidden');
-});
-
-
-
+// FUNCTIONS 
 
 function main () {
      /**

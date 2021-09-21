@@ -16,30 +16,39 @@ tags:
         rel="stylesheet">
     <title>{{ page.title }}</title>
 </head>
-<body class="w-full h-full flex  mx-auto bg-black" style="font-family: 'Ubuntu', sans-serif;"> 
+<body class="w-full h-full flex flex-col sm:flex-row mx-auto bg-black" style="font-family: 'Ubuntu', sans-serif;">
     
-    {% include header.html %}
-    <aside id="menudesk" class="w-60 h-screen flex flex-col px-4 justify-start mt-6 bg-black fixed text-white">
-        <div class="w-full h-auto flex justify-end">
-            <button id="btmenu" class="w-auto h-auto mr-16"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
-            <img class="w-20 h-auto flex rounded-2xl self-end " src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4"alt="Viriato Nova">
-        </div>
-        <div class="flex flex-col border-b border-purple-500 py-6 font-semibold text-right tracking-wider">
-            <h2 class="w-full text-3xl">Viriato Nova</h2>
-            <h2 class="w-full text-base text-gray-700 tracking-widest">Personal Blog</h2>
-        </div>
-        <nav class="w-full h-auto flex flex-col space-y-4 py-6 text-right text-sm tracking-widest font-light border-b border-purple-500">
+    <div id="mobileNav" class="flex sm:hidden w-full h-auto">
+        <nav class="w-full h-full p-2 flex">
+            <button id="btmenu" class="w-auto h-auto ml-4"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+            <div class="w-full flex flex-col items-end mr-4">
+                <h2 class="w-full text-xl text-white text-right font-normal tracking-wide">Viriato Nova</h2>
+                <p class="w-full text-xs text-gray-400 text-right tracking-widest">Personal Blog</p>
+            </div>
+        </nav>
+    </div>
+
+    <div id="togglePage" class="w-full h-auto flex flex-col">
+        <nav class="w-full h-full flex flex-col items-center space-y-2 py-6  tracking-wider text-lg font-semibold text-white">
             <a class="hover:text-pink-600" href="#sobre">Blog</a>
             <a class="hover:text-pink-600" href="#js">Sobre</a>
             <a class="hover:text-pink-600" href="#django">Projetos</a>
         </nav>
-        <div class="flex flex-col py-6 justify-center items-center border-b border-purple-500">
-            <h2 class="w-full font-semibold text-right">Tag's</h2>
-            {% if site.tags != "" %}
-                {% include collecttags.html %}
-            {% endif %}
+    </div>
+    
+    <aside id="menudesk" class="w-60 h-screen hidden sm:flex flex-col px-4 justify-start mt-6 bg-black fixed text-white">
+        <div class="w-full h-full flex flex-col justify-end">
+            <div class="w-full h-full flex flex-col py-6 font-semibold text-right tracking-wider">
+                <h2 class="w-full text-3xl">Viriato Nova</h2>
+                <p class="w-full text-base text-gray-700 tracking-widest">Personal Blog</p>
+            </div>
         </div>
-        <ul class="flex justify-center space-x-6 mt-4" >
+        <nav class="w-full h-full flex flex-col space-y-4 py-6 text-right text-sm tracking-widest font-light">
+            <a class="hover:text-pink-600" href="#sobre">Blog</a>
+            <a class="hover:text-pink-600" href="#js">Sobre</a>
+            <a class="hover:text-pink-600" href="#django">Projetos</a>
+        </nav>
+        <ul class="w-full h-full flex justify-center space-x-6 mt-4" >
             <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 4.png" alt=""></a>
             <a href="https://github.com/viriatonova" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 6.png" alt=""></a>
             <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-4" src="/assents/images/iconsAtivo 7.png" alt=""></a>
@@ -48,9 +57,9 @@ tags:
         </ul>
     </aside>
 
-    <section class="w-auto h-full ml-0 md:ml-60 px-10 py-6 flex flex-col justify-start bg-white">
+    <section class="w-full h-full ml-0 sm:ml-60 px-10 py-6 flex flex-col justify-start bg-white">
         {% for post in site.posts %}
-        <article class="w-full h-auto mb-10 flex flex-col justify-center items-start">
+        <article class="w-full h-full mb-10 flex flex-col justify-center items-start">
             <a class="w-full font-black pb-2 text-2xl text-purple-900 tracking-wide self-star border-b-2 border-gray-700" href="{{ post.url }}">{{ post.title }}</a>
             <div class="w-full h-auto pt-2 flex justify-start items-start">
                 <div class="w-auto h-auto py-px px-2 text-sm font-light">{{ post.date | date: '%B %d, %Y' }}</div>
@@ -61,7 +70,7 @@ tags:
         {% endfor %}
     </section>
     
-    <script src="/assents/js/main.js"></script>
+    <script type="module" src="/assents/js/main.js"></script>
 </body>
 
 </html>

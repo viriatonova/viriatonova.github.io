@@ -1,8 +1,4 @@
-<<<<<<< HEAD:.jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/ab/673d9c3ad92a1829a7b31c0b05f24da7ded9a29a310da687f854c165278b1c
-I"|<h2 class="text-2xl font-semibold tracking-wider">Construindo uma calculadora de IMC em JavaScript</h2>
-=======
-I"�<h2 class="text-2xl font-semibold tracking-wider">Construindo uma calculadora de IMC em JavaScript</h2>
->>>>>>> layout-v.2:.jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/17/cc0d4c6a4691fdd54977b56e8a9bc61cb70555a1a1e97ad1893e49c2add961
+I"C<h2 class="text-2xl font-semibold tracking-wider">Construindo uma calculadora de IMC em JavaScript</h2>
 <p class="mt-4 mb-12 text-base font-light tracking-wide leading-8">
 Este é um pequeno exercício de JavaScript. A idéia aqui é fazer um formulário que calcule o IMC
 (Indíce de Massa Corporea). O script também aponta em que faixa de IMC a pessoa está e 
@@ -17,13 +13,8 @@ dispõe o valor do IMC em verde ou vermelho dependendo do resultado.
             <div id="result" class="w-3/5 flex justify-center"></div>
         </div>
         <div class="w-full py-2 px-2 flex mt-4 border border-white rounded-lg">
-<<<<<<< HEAD:.jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/ab/673d9c3ad92a1829a7b31c0b05f24da7ded9a29a310da687f854c165278b1c
             <p class="w-1/2 flex justify-center items-center">Faixa de IMC</p>
             <div id="tipResult" class="w-1/2 flex justify-center items-center"></div>
-=======
-            <p>Faixa de IMC</p>
-            <div id="tipResult" class="w-1/2"></div>
->>>>>>> layout-v.2:.jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/17/cc0d4c6a4691fdd54977b56e8a9bc61cb70555a1a1e97ad1893e49c2add961
         </div>
         <form id="imcform" action="." class="w-full flex flex-col mt-4">
             <label for="altura">Altura</label>
