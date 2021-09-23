@@ -1,6 +1,6 @@
 ---
-layout:"page"
 title: ViriatoNova
+tags:
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +30,9 @@ title: ViriatoNova
 
     <div id="togglePage" class="hidden w-full h-auto">
         <nav class="w-full h-full flex flex-col items-center space-y-2 py-6  tracking-wider text-lg font-semibold text-white">
-            <a class="hover:text-pink-600" href=".">Home</a>
-            <a class="hover:text-pink-600" href="sobre.html">Sobre</a>
-            <a class="hover:text-pink-600" href=".">Projetos</a>
+            <a class="hover:text-pink-600" href="sobre.html">Blog</a>
+            <a class="hover:text-pink-600" href="#js">Sobre</a>
+            <a class="hover:text-pink-600" href="#django">Projetos</a>
         </nav>
     </div>
     
@@ -45,9 +45,9 @@ title: ViriatoNova
             </div>
         </div>
         <nav class="w-full h-full flex flex-col space-y-4 py-6 text-right text-sm tracking-widest font-light">
-            <a class="hover:text-pink-600" href=".">Home</a>
-            <a class="hover:text-pink-600" href="sobre.html">Sobre</a>
-            <a class="hover:text-pink-600" href=".">Projetos</a>
+            <a class="hover:text-pink-600" href="sobre.html">Blog</a>
+            <a class="hover:text-pink-600" href="#js">Sobre</a>
+            <a class="hover:text-pink-600" href="#django">Projetos</a>
         </nav>
         <ul class="w-full h-auto flex justify-center items-end space-x-6" >
             <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 4.png" alt=""></a>
@@ -57,20 +57,4 @@ title: ViriatoNova
             <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-5 h-auto" src="/assents/images/email.png" alt=""></a>
         </ul>
     </aside>
-
-    <section class="w-full h-full ml-0 sm:ml-80 px-10 py-6 flex flex-col justify-start bg-white">
-        {% for post in site.posts %}
-        <article class="w-full h-full mb-10 flex flex-col justify-center items-start">
-            <a class="w-full font-black pb-2 text-2xl text-purple-900 tracking-wide self-star border-b-2 border-gray-700" href="{{ post.url }}">{{ post.title }}</a>
-            <div class="w-full h-auto pt-2 flex justify-start items-start">
-                <div class="w-auto h-auto py-px px-2 text-sm font-light">{{ post.date | date: '%B %d, %Y' }}</div>
-                <div class="w-auto h-auto py-px px-2 bg-pink-500 text-base font-light rounded-2xl">{{ post.tags }}</div>
-            </div>
-            <p class="mt-12 font-light text-body tracking-wide">{{ post.content }}</p>
-        </article>
-        {% endfor %}
-    </section>
-    <script type="module" src="/assents/js/main.js"></script>
-</body>
-
-</html>
+  
