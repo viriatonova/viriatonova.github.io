@@ -1,5 +1,0 @@
----
-layout: main
-title: ViriatoNova
----
-

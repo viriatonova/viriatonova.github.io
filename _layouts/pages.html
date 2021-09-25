@@ -1,61 +1,7 @@
----
-title: ViriatoNova
----
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@300;700&display=swap"
-        rel="stylesheet">
-    <title>{{ page.title }}</title>
-</head>
-<body class="w-full h-full flex flex-col sm:flex-row mx-auto bg-black" style="font-family: 'Ubuntu', sans-serif;">
-    
-    <div id="mobileNav" class="flex sm:hidden w-full h-auto">
-        <nav class="w-full h-full p-2 flex">
-            <button id="btmenu" class="w-auto h-auto ml-4"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
-            <div class="w-full flex flex-col items-end mr-4">
-                <h2 class="w-full text-xl text-white text-right font-normal tracking-wide">Viriato Nova</h2>
-                <p class="w-full text-xs text-gray-400 text-right tracking-widest">Personal Blog</p>
-            </div>
-        </nav>
-    </div>
+{% include header.html %}
 
-    <div id="togglePage" class="hidden w-full h-auto">
-        <nav class="w-full h-full flex flex-col items-center space-y-2 py-6  tracking-wider text-lg font-semibold text-white">
-            <a class="hover:text-pink-600" href=".">Home</a>
-            <a class="hover:text-pink-600" href="sobre.html">Sobre</a>
-            <a class="hover:text-pink-600" href=".">Projetos</a>
-        </nav>
-    </div>
-    
-    <aside id="menudesk" class="w-auto h-screen hidden sm:flex flex-col px-4 py-10 justify-start items-start bg-black fixed text-white">
-        <div class="w-full h-1/3 flex flex-col justify-end items-end text-right">
-            <img class="w-20 h-20 rounded-2xl" src="assents/images/eu.png" alt="viriato">
-            <h2 class="w-full mt-2 text-lg">Viriato Nova</h2>
-            <p class="w-full text-sm text-gray-700">Personal Blog</p>
-        </div>
-        <nav class="w-full h-full mt-4 flex flex-col space-y-4 py-6 text-right text-sm tracking-widest font-light">
-            <a class="hover:text-pink-600" href=".">Home</a>
-            <a class="hover:text-pink-600" href="sobre.html">Sobre</a>
-            <a class="hover:text-pink-600" href=".">Projetos</a>
-        </nav>
-        <ul class="w-full h-auto flex flex-col justify-center items-end space-y-6" >
-            <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 4.png" alt=""></a>
-            <a href="https://github.com/viriatonova" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 6.png" alt=""></a>
-            <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-4" src="/assents/images/iconsAtivo 7.png" alt=""></a>
-            <a href="https://www.instagram.com/viriato_nova/" target="_blank"><img class="w-4 h-4" src="/assents/images/iconsAtivo 5.png" alt=""></a>
-            <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-5 h-auto" src="/assents/images/email.png" alt=""></a>
-        </ul>
-    </aside>
-   
-    
-    <script type="module" src="/assents/js/main.js"></script>
-</body>
+    <main class="w-full h-full mt-12 flex flex-col justify-center px-12 text-white">
+        {{ page.content }}
+    </main>
 
-</html>
+{% include footer.html %}  
