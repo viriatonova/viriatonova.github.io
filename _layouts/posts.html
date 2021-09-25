@@ -1,9 +1,9 @@
 {% include header.html %}
 
     <main class="w-full h-full mt-12 px-12 flex flex-col text-white">
-        <header class="w-full h-full flex ">
-            <h2 class="w-1/2 flex text-5xl py-px text-purple-300 text-xl font-normal">{{ page.title }}</h2>
-            <div class="w-1/2 flex justify-end items-end mr-12 py-2">
+        <header class="w-full h-full flex flex-col sm:flex-row ">
+            <h2 class="w-full sm:w-1/2 flex text-5xl py-px text-purple-300 text-xl font-normal">{{ page.title }}</h2>
+            <div class="w-full sm:w-1/2 flex justify-end items-end mr-12 py-2">
                 <p class="text-md font-light text-center">{{ page.date | date: '%B %d, %Y' }}</p>
                 <p class="ml-6 px-2 py-px bg-pink-500 text-md font-light rounded-xl text-center">{{ page.tags }}</p>
             </div>
