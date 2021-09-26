@@ -1,0 +1,64 @@
+---
+layout: posts
+title: Boxing Timer
+tags: JavaScript
+img: "assets/images/js.png"
+text: Construindo um app para treinos de boxe
+---
+<h2 class="text-2xl font-semibold tracking-wider">Construindo um app para treinos de boxe</h2>
+<p class="mt-4 mb-12 text-base font-light tracking-wide leading-8">
+    Este app era um exercício de JavaScript com intenção de fazer um cronometro. 
+    Sempre uso apps que contão rounds de boxe para fazer alguns treinos e sempre acho 
+    os apps feitos propositadamente feitos para dificultar o uso. Quando não a dificuldades
+    para usar o app a interface é bem tosca. <br>
+    <br>
+    Com o exercício em mãos resolvi ir um pouco além e customizar uma interface clean e apliar
+    a funcação do cronometro para um contador de raunds. Inicialmente foi um tanto facil, pois 
+    usando HTML e Tailwind rapidamente criamos uma interface. Fazer a ligação entre o cronometro 
+    e o JavaScript foi trivial, contudo, alguns bugs aconteceram no processo de customizar o contador. <br>
+    <br>
+    Após algum esforço e paciência consegui concluir o app e obviamente agora estou o usando o meu!
+</p>
+
+<main id="main" class="w-4/5 md:w-96 h-auto px-4 pt-4 pb-2 rounded-3xl bg-white">
+    <div id="timer" class="w-full h-28 flex justify-center items-center bg-black rounded-xl text-white text-7xl">
+        <p id="showRounds" class="w-1/3 flex justify-center items-center"></p>
+        <p id="showTime" class="w-2/3 flex justify-center items-center"></p>
+    </div>
+    <div id="menu" class="w-full h-auto mt-2 grid grid-rows-1 grid-cols-3 gap-2">
+        <button id="start" class="w-auto h-auto px-3 py-px bg-gray-500 text-white text-sm uppercase font-light rounded-md hover:bg-yellow-600">Start</button>
+        <button id="pause" class="w-auto h-auto px-3 py-px bg-gray-500 text-white text-sm uppercase font-light rounded-md hover:bg-yellow-600">Pause</button>
+        <button id="reset" class="w-auto h-auto px-3 py-px bg-gray-500 text-white text-sm uppercase font-light rounded-md hover:bg-yellow-600">Reset</button>
+    </div>
+    <div class="w-full h-auto mt-4 flex flex-col justify-center items-center">
+        <h2>Rounds</h2>
+        <div class="w-full mt-2 flex justify-center items-center">
+            <button id="removeRounds" class="w-1/4 flex justify-center items-center"><img class="w-6" src="images/remove.png" alt=""></button>
+            <p id="roundsvalue" class="w-2/4 flex justify-center items-center text-2xl font-semibold"></p>
+            <button id="somaRounds" class="w-1/4 flex justify-center items-center"><img class="w-6" src="images/add.png" alt=""></button>
+        </div>
+    </div>
+    <div class="w-full h-auto mt-4 flex flex-col justify-center items-center">
+        <h2>Round Time</h2>
+        <div class="w-full mt-2 flex justify-center items-center">
+            <button id="removeTime" class="w-1/4 flex justify-center items-center"><img class="w-6" src="images/remove.png" alt=""></button>
+            <p id="timeValue" class="w-2/4 flex justify-center items-center text-2xl font-semibold"></p>
+            <button id="somaTime" class="w-1/4 flex justify-center items-center"><img class="w-6" src="images/add.png" alt=""></button>
+        </div>
+    </div>
+    <div class="w-full h-auto mt-4 flex flex-col justify-center items-center">
+        <h2>Rest Time</h2>
+        <div class="w-full mt-2 flex justify-center items-center">
+            <button id="removeRest" class="w-1/4 flex justify-center items-center"><img class="w-6" src="images/remove.png" alt=""></button>
+            <p id="restTime" class="w-2/4 flex justify-center items-center text-2xl font-semibold"></p>
+            <button id="addRest" class="w-1/4 flex justify-center items-center"><img class="w-6" src="images/add.png" alt=""></button>
+        </div>
+    </div>
+    <footer class="w-full h-6 mt-8 flex justify-center items-end text-center">
+        <h1 class="w-1/3 h-auto font-normal text-sm">Boxing Timer</h1>
+        <p class="w-1/3 h-auto font-light text-xs">V1.0</p>
+        <p class="w-1/3 h-auto font-light text-xs">by: Megaterio</p>
+    </footer>
+</main>
+
+
