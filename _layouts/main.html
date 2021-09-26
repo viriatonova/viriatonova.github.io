@@ -8,7 +8,7 @@ title: ViriatoNova
        
         <section class="w-full h-full sm:w-2/3 h-full flex flex-col justify-center px-4 mt-2 sm:mt-6">
             {% for post in site.posts %}
-            <article class="w-full h-auto p-4 mt-4 flex flex-col rounded-3xl text-white border border-gray-300 border-opacity-50 sm:border-none">
+            <article class="w-full h-auto px-4 py-8 flex flex-col rounded-3xl text-white">
                 <div class="w-full flex">
                     <img class="w-20 h-20 rounded-xl object-cover object-top" src="{{ post.img }}" alt="">
                     <div class="w-full h-auto px-4 flex flex-col justify-start">
@@ -21,6 +21,7 @@ title: ViriatoNova
                 </div>
                 <p class="w-full h-full mt-px py-2 text-yellow-100 text-md tracking-wide">{{ post.text }}</p>
             </article>
+            <div class="w-10 h-auto flex mx-auto border-b border-gray-400 "></div>
             {% endfor %}
         </section>
         <aside class="w-1/3 h-full hidden sm:flex flex-col sm:mt-6 sm:px-4 text-white" style="font-family: 'Ubuntu Mono', monospace;">
