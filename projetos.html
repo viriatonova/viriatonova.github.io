@@ -3,42 +3,101 @@ layout: pages
 title: projetos
 permalink: /projetos/
 ---
-<section class="w-full h-full grid grid-cols-2 gap-6">
-    <article class="w-auto h-auto p-2 flex flex-col">
+<section class="w-full h-full flex flex-col py-12">
+
+    <article class="w-auto h-auto sm:p-2 flex flex-col">
         <div class="py-2 border-b border-b border-white border-opacity-50">
             <h2 class="text-3xl font-semibold">Personal Blog</h2>
-            <h3 class="text-md font-ligth">blog feito em Jekyll com customização própria</h3>
+            <h3 class="mt-2 text-md font-ligth text-purple-300">blog feito em Jekyll com customização própria</h3>
         </div>
-        <div class="flex py-4">
-            <img class="w-1/3 rounded-l-xl" src="/../assets/images/personalblog.png" alt="">
-            <div class="w-2/3 ml-4">
-                <ul class="flex items-center space-x-6">
-                    <p class="mr-4">Links:</p>
-                    <a href="https://github.com/viriatonova/viriatonova.github.io" target="_blank"><img class="w-8 h-8" src="/../assets/images/iconsAtivo 6.png" alt=""></a>
-                    <a href="https://viriatonova.github.io/" target="_blank"><img class="w-8 h-8" src="/../assets/images/net.png" alt=""></a>
-
+        <div class="flex flex-col sm:flex-row py-4">
+            <img class="w-full sm:w-1/3 rounded-xl sm:rounded-l-xl" src="/../assets/images/personalblog.png" alt="">
+            <div class="w-full sm:w-2/3 ml-4">
+                <ul class="flex flex-col sm:flex-row">
+                    <div class="flex justify-start items-end">
+                        <p class="text-md sm:text-lg font-semibold">Links:</p>
+                        <a class="ml-6" href="https://github.com/viriatonova/viriatonova.github.io" target="_blank"><img class="w-8 h-8" src="/../assets/images/iconsAtivo 6.png" alt=""></a>
+                        <a class="ml-6" href="https://viriatonova.github.io/" target="_blank"><img class="w-8 h-8" src="/../assets/images/net.png" alt=""></a>
+                    </div>
+                    <div class="flex justify-start items-end mt-2 sm:mt-0">
+                        <p class="ml-0 sm:ml-20 text-md sm:text-lg font-semibold">Usando:</p>
+                        <p class="text-sm sm:text-lg ml-6 text-yellow-300">Ruby | HTML | JavaScript | TailwindCSS</p>
+                    </div>
                 </ul>
-                <p class="mt-4">
-                    O personal blog surgiu como resposta a busca de um lugar
-                    para apresentar meu trabalho como desenvolvedor.
+                <p class="mt-4 text-md font-thin ">
+                    Inicialmente a ideia era ter uma pagina no Github para expor meu portifolio
+                    pessoal. Quando encontrei o Jekyll como uma funcionalidade que o próprio Github
+                    oferece na hospedagem das paginas, não exitei em usar. <br>
+                    <br>
+                    O Jekyll oferece alguns temas para serem usandos com blog, mas venho encarando 
+                    tudo em desenvolvimento como um exercício, logo, comecei esse tema do zero. <br>
+                    <br>
                 </p>
             </div>
         </div>
     </article>
-    <article class="w-auto h-auto p-2 flex flex-col">
+    
+    <article class="w-auto h-auto sm:p-2 flex flex-col">
         <div class="py-2 border-b border-b border-white border-opacity-50">
-            <h2 class="text-3xl font-semibold">Kent Creative</h2>
-            <h3 class="text-md font-ligth">Aplicativo Web feito em Django</h3>
+            <h2 class="text-3xl font-semibold">Image Upload</h2>
+            <h3 class="mt-2 text-md font-ligth text-purple-300">App para upload de imagem e mudança de metadata</h3>
         </div>
-        <div class="flex py-4">
-            <img class="w-1/3 rounded-l-xl" src="/../assets/images/eu.png" alt="">
-            <div class="w-2/3 ml-4">
-                <a href=""></a>
-                <p>
-                    O personal blog surgiu como resposta a busca de um lugar
-                    para apresentar meu trabalho como desenvolvedor.
+        <div class="flex flex-col sm:flex-row py-4">
+            <img class="w-full sm:w-1/3 rounded-xl sm:rounded-l-xl" src="/../assets/images/PC.png" alt="">
+            <div class="w-full sm:w-2/3 ml-4">
+                <ul class="flex items-end mt-4">
+                    <p class="text-md sm:text-lg font-semibold">Usando:</p>
+                    <p class="text-sm sm:text-lg ml-6 text-yellow-300">Python | Django | HTML | TailwindCSS</p>
+                </ul>
+                <p class="mt-4 text-md font-thin">
+                    Esse foi meu primeiro projeto feito em um ambiente real de desenvolvimento. Image Upload
+                    foi desenvolvido para atender a necessidade de uma empresa de dsigner que recebe muitas
+                    fotos dos seu clintes e parceiros. A empresa em questão queria uma forma de receber as 
+                    imagens com os metadados já modificados e organizados para que seu workflow ganhe praticidade<br>
+                    <br>
+                    Tudo que o app faz é receber uma imagem e implementar algumas informações dentro do arquivo. 
+                    As imformações são recebidas por um formulário, e, no final a imagem é enviada para outra aplicação
+                    onde poderá ser acessada de forma organizada por meio de filtros.
+                </p>
+            </div>
+        </div>
+        <p class="text-md font-thin">
+            O app em si é feito totalmente em Django. Apesar da impressão simples que o projeto tem, em um ambiente 
+            real de desenvolvimento tivemos que usar uma serie de ferramentas como: Docker, Docker Compose, Makefile, 
+            testes de unidade, testes de integração dentre outras. O ambiente de trabalho foi o GitLab. Usamos metódos 
+            ágeis, tudo feito em tickets com pequenas demanadas, diversos brachs e 3 desenvolvedores atuando ao mesmo tempo.<br>
+            <br>
+            Particularmente, penso que frente a todo tempo de estudo que dedico ao desenvolvimento, também comparando 
+            ao desenvolvimento de projetos pessoais (locais), trabalhar em um projeto sendo gerenciado por um desenvolvedor
+            senior, e, necessáriamente tendo que adaptar-me a um fluxo de trabalho colaborativo, foi, sem sombra de duvidas, 
+            a experiência que mais me fez crescer e entender o que é de fato o universo do desenvolvimento.
+        </p>
+    </article>
+
+    <article class="w-auto h-auto sm:p-2 flex flex-col mt-20">
+        <div class="py-2 border-b border-b border-white border-opacity-50">
+            <h2 class="text-3xl font-semibold">Site Corporativo</h2>
+            <h3 class="mt-2 text-md font-ligth text-purple-300">Site feito para o Github Pages.</h3>
+        </div>
+        <div class="flex flex-col sm:flex-row py-4">
+            <img class="w-full sm:w-1/3 rounded-xl sm:rounded-l-xl" src="/../assets/images/sprout.png" alt="">
+            <div class="w-full sm:w-2/3 ml-4">
+                <ul class="flex flex-col sm:flex-row mt-4 sm:mt-0">
+                    <div class="flex justify-start items-end">
+                        <p class="text-md sm:text-lg font-semibold">Links:</p>
+                        <a class="ml-6" href="https://lucassprout.github.io/" target="_blank"><img class="w-8 h-8" src="/../assets/images/net.png" alt=""></a>
+                    </div>
+                    <div class="flex justify-start items-end mt-2 sm:mt-0">
+                        <p class="ml-0 sm:ml-20 text-md sm:text-lg font-semibold">Usando:</p>
+                        <p class="text-sm sm:text-lg ml-6 text-yellow-300">HTML | JavaScript | TailwindCSS</p>
+                    </div>
+                </ul>
+                <p class="mt-4 text-md font-thin ">
+                    Um simples site corporativo. O site em si é uma landing page, contudo, adicionei algmas funcionalidades 
+                    em JavaScript para dar alguma dinâmica.
                 </p>
             </div>
         </div>
     </article>
+    
 </section>
