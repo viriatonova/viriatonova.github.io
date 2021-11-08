@@ -11,21 +11,20 @@
         rel="stylesheet">
     <title>Viriato Nova</title>
 </head>
-<body class="w-screen h-screen flex bg-gray-200 relative" style="font-family: 'Ubuntu', sans-serif;">
+<body class="w-screen h-screen bg-gray-200 relative" style="font-family: 'Ubuntu', sans-serif;">
 
     <!-- Moible Nav -->
-    <div id="mobileNav" class="flex sm:hidden w-full h-auto">
+    <div id="mobileNav" class="flex sm:hidden w-full h-auto bg-gray-900">
         <nav class="w-full h-full p-2 flex">
-            <button id="btmenu" class="w-auto h-auto ml-4"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+            <!-- <button id="btmenu" class="w-auto h-auto ml-4"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button> -->
             <div class="w-full flex flex-col items-end mr-4">
-                <h2 class="w-full text-xl text-right font-normal tracking-wide">Viriato Nova</h2>
-                <p class="w-full text-xs text-gray-400 text-right tracking-widest">Personal Blog</p>
+                <h2 class="w-full text-xl text-right text-white font-normal tracking-wide">Viriato Nova</h2>
             </div>
         </nav>
     </div>
 
     <!-- Mobile Toggle Page -->
-    <div id="togglePage" class="hidden w-full h-screen flex flex-col">
+    <div class="w-full h-screen flex flex-col bg-gray-900">
         <nav class="w-full h-auto flex justify-center items-cente py-6 px-4 mt-4 tracking-wider text-lg font-semibold text-yellow-100">
             <a class="hover:text-pink-600 pr-4" href="/.">Home</a>
             <a class="hover:text-pink-600 border-l border-gray-700 pl-4" href="/projetos">Projetos</a>
@@ -42,25 +41,29 @@
                 <img class="w-1/2 h-auto p-2 rounded-2xl shadow-xl self-start" 
                 src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" 
                 alt="Viriato Nova">
-                <h2 class="w-1/2 ml-4 mt-4 pb-2 text-2xl font-semibold self-start">
+                <h2 class="w-1/2 ml-4 mt-4 pb-2 text-2xl text-white font-semibold self-start">
                     Olá,<br>Eu sou Viriato Nova
                 </h2>
             </div>
-            <p class="mt-4 font-light text-md text-gray-400 tracking-wide">
-                Sou soteropolitano, tenho formação em Engenharia trabalho
-                com desenvolviemnto Web desde 2020<br>
-                <br/>
+            <p class="mt-4 font-light text-md text-white tracking-wide">
+                Sou soteropolitano, tenho formação em Engenharia e trabalho
+                com Desenvolvimento Web desde 2020<br>
+                </br>
+                Sou uma pessoa intelectualmente inquieta. Apesar da minha formação começar na engenharia, 
+                tenho verdadeira paixão por filosofia e jornalismo. Hoje, a tecnologia, mais precisamente 
+                a compreensão do universo da cibernética é o campo de estudo que mais me dedico. 
+                </br>
                 Minhas minhas principais competências são:<br/>
-                
+                </br>
                 Python | Django | Java Script | HTML | CSS 
             </p>
         </article>
     </div>
 
     <!-- Desktop -->
-    <main class="w-full h-full flex">
+    <main class="w-full h-full hidden sm:flex">
         
-        <aside id="menudesk" class="w-auto h-full px-4 hidden sm:flex justify-end items-center bg-gray-700">
+        <aside id="menudesk" class="w-auto h-full px-4 flex justify-end items-center bg-gray-700">
             <ul class="w-full h-full mb-10 flex flex-col justify-end items-center space-y-10">
                 <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-5 h-auto" src="/../assets/images/email.png" alt=""></a>
                 <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/../assets/images/iconsAtivo 4.png" alt=""></a>
@@ -70,8 +73,7 @@
             </ul>
         </aside>
         
-        <section class="w-full h-full hidden sm:flex flex-col" style="font-family: 'Ubuntu Mono', monospace;">
-
+        <section id="home" class="w-full h-full flex flex-col" style="font-family: 'Ubuntu Mono', monospace;">
             <header class="w-full h-auto py-4 flex justify-center items-center">
                 <h1 class="w-1/2 h-full ml-12 text-xl">Desenvolverdor Web Front-end</h1>
                 <nav class="w-1/2 h-full flex px-10 justify-end items-center space-x-10 text-right text-md tracking-widest font-light">
@@ -80,7 +82,7 @@
                 </nav>
             </header>
             
-            <article id="sobre" class="w-1/2 h-full flex">
+            <article class="w-1/2 h-full flex">
                 <div class="ml-12 flex flex-col justify-start items-center">
                     <h2 class="w-full mt-12 text-2xl font-semibold self-start">
                         Olá,<br>Eu sou Viriato Nova
@@ -108,14 +110,18 @@
             </article>
             <div class="w-1/2 h-full mt-24 ml-12 flex">
                 <span>Contato:</span>
-                <a class="ml-4 hover:text-pink-600" href="mailto:viriatosampaio@gmail.com">viriatosampaio@gmail</a>
+                <a class="ml-4 hover:text-pink-600" href="mailto:viriatosampaio@gmail.com" target="_blank">viriatosampaio@gmail</a>
             </div>
 
             
+            <img class="w-1/3 h-auto absolute right-0 bottom-0" src="/assets/images/me.jpg" alt="">
+        </section>
+
+        <section id="projetos" class="w-full h-full hidden flex flex-col" style="font-family: 'Ubuntu Mono', monospace;">
+
         </section>
         
         
-        <img class="w-1/3 h-auto absolute right-0 bottom-0" src="/assets/images/me.jpg" alt="">
     </main>
     <script type="module" src="/assets/js/main.js"></script>
 </body>
