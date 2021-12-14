@@ -1,8 +1,35 @@
 @tailwind base;
 @tailwind components;
 
+/*
+* Geral
+*/
+
+
+/*
+* Tipografia
+*/
 .blogh2 {
-  @apply text-4xl text-purple-900 font-semibold tracking-wide
+  @apply text-4xl text-gray-900 font-semibold font-oswald tracking-wider 
 }
+
+.blogsup {
+  @apply text-sm text-gray-700 font-light font-mono tracking-widest
+}
+
+
+/*
+* Elementos
+*/
+
+
+/*
+* Components
+*/
+.blognav {
+  @apply w-full h-16 bg-clip-padding backdrop-filter backdrop-blur-xl 
+  bg-opacity-60 border border-gray-200 shadow-md z-30 fixed top-0
+}
+
 
 @tailwind utilities;
