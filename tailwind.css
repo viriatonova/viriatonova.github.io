@@ -4,7 +4,6 @@
 
 @layer components {
 
-
     /* MOBILE */
 
     .mobile-nav {
@@ -32,6 +31,30 @@
         tracking-wider text-lg font-semibold text-yellow-100
     }
 
+    .mobile-home {
+        @apply hover:text-pink-600 pr-4
+    }
+
+    .mobile-smallapps {
+        @apply hover:text-pink-600 border-l border-gray-700 pl-4
+    }
+
+    .mobile-social-1 {
+        @apply w-4 h-4
+    }
+
+    .mobile-social-2 {
+        @apply w-auto h-4
+    }
+
+    .mobile-social-2 {
+        @apply w-auto h-4
+    }
+
+    .mobile-social-3 {
+        @apply w-5 h-auto
+    }
+
     .mobile-toggle-page ul {
         @apply w-full h-auto py-6 flex justify-center items-center space-x-8
     }
@@ -44,7 +67,7 @@
     /*DESK*/
 
     body {
-        @apply w-screen h-screen bg-gray-200 relative font-ubuntu
+        @apply w-screen h-screen bg-slate-50 relative font-ubuntu
     }
 
     body main {
@@ -58,5 +81,7 @@
     body section {
         @apply w-full h-full flex flex-col font-ubuntu-mono
     }
+
+
     
 }
