@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/assets//css/notas-style.css" rel="stylesheet">
+    <link href="/assets//css/main.css" rel="stylesheet">
     <title>Pizzaria Capão Grande</title>
 </head>
-<body>
-    <main>
-        <header>
+<body class="w-screen h-screen">
+    <nav class="nav-bar">
+        <a class="h-full px-2 nav-link" href="/.">Home</a>
+        <a class="h-full px-2 nav-link" href="/smallapps.html">SmallApps</a>
+    </nav>
+    <main class="notas-main">
+        <header class="h-1/2">
             <form id="pizza-form" action="/notaspizzaria.html">
                 <div class="input-wraper">
                     <i class="">Peso</i>
@@ -29,7 +33,7 @@
                 </div>
             </form> 
         </header>
-        <section id="visor" class="mt-12">
+        <section id="visor" class="h-1/2 flex justify-start items-center mt-12">
             <ul class="valor-list">
                 <li>
                     <span class="pizza-tamanho">Pizza Média</span>
