@@ -4,39 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@300;700&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
+    <!-- css for development -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- css for productions -->
+    <!-- <link rel="stylesheet" href="/assets/css/main-dev.css"> -->
     <title>Viriato Nova</title>
 </head>
-<body class="w-screen h-screen bg-gray-200 relative" style="font-family: 'Ubuntu', sans-serif;">
+<body class="">
 
     <!-- Moible Nav -->
-    <div id="mobileNav" class="flex sm:hidden w-full h-auto bg-gray-900">
-        <nav class="w-full h-full p-2 flex">
+    <div id="mobileNav" class="mobile-nav">
+        <nav class="">
             <!-- <button id="btmenu" class="w-auto h-auto ml-4"><svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button> -->
-            <div class="w-full flex flex-col items-end mr-4">
-                <h2 class="w-full text-xl text-right text-white font-normal tracking-wide">Viriato Nova</h2>
+            <div class="">
+                <h2 class="">Viriato Nova</h2>
             </div>
         </nav>
     </div>
 
     <!-- Mobile Toggle Page -->
-    <div class="w-full h-screen flex flex-col sm:hidden bg-gray-900">
-        <nav class="w-full h-auto flex justify-center items-cente py-6 px-4 mt-4 tracking-wider text-lg font-semibold text-yellow-100">
+    <div class="mobile-toggle-page">
+        <nav class="">
             <a class="hover:text-pink-600 pr-4" href="/.">Home</a>
             <a class="hover:text-pink-600 border-l border-gray-700 pl-4" href="/projetos">Projetos</a>
         </nav>
-        <ul class="w-full h-auto py-6 flex justify-center items-center space-x-8">
+        <ul class="">
             <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/../assets/images/iconsAtivo 4.png" alt=""></a>
             <a href="https://github.com/viriatonova" target="_blank"><img class="w-4 h-4" src="/../assets/images/iconsAtivo 6.png" alt=""></a>
             <a href="https://www.facebook.com/Viriato.Nova" target="_blank"><img class="w-auto h-4" src="/../assets/images/iconsAtivo 7.png" alt=""></a>
             <a href="https://www.instagram.com/viriato_nova/" target="_blank"><img class="w-4 h-4" src="/../assets/images/iconsAtivo 5.png" alt=""></a>
             <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-5 h-auto" src="/../assets/images/email.png" alt=""></a>
         </ul>
-        <article id="sobre" class="w-full h-auto px-4 mt-12 flex flex-col justify-start items-center">
+        <article id="sobre" class="">
             <div class="flex justify-start items-center">
                 <img class="w-1/2 h-auto p-2 rounded-2xl shadow-xl self-start" 
                 src="https://avatars.githubusercontent.com/u/81425727?s=400&u=aff870ea3ebd3fc0ede48ee2520b5e46460e5ddb&v=4" 
@@ -61,9 +65,9 @@
     </div>
 
     <!-- Desktop -->
-    <main class="w-full h-full hidden sm:flex">
+    <main class="">
         
-        <aside id="menudesk" class="w-auto h-full px-4 flex justify-end items-center bg-gray-700">
+        <aside id="menudesk" class="">
             <ul class="w-full h-full mb-10 flex flex-col justify-end items-center space-y-10">
                 <a href="mailto:viriatosampaio@gmail.com" target="_blank"><img class="w-5 h-auto" src="/../assets/images/email.png" alt=""></a>
                 <a href="https://www.linkedin.com/in/viriato-nova-4a155b127/" target="_blank"><img class="w-4 h-4" src="/../assets/images/iconsAtivo 4.png" alt=""></a>
@@ -73,7 +77,7 @@
             </ul>
         </aside>
         
-        <section id="home" class="w-full h-full flex flex-col" style="font-family: 'Ubuntu Mono', monospace;">
+        <section id="home" class="">
             <header class="w-full h-auto py-4 flex justify-center items-center">
                 <h1 class="w-1/2 h-full ml-12 text-xl">Desenvolverdor Web Front-end</h1>
                 <nav class="w-1/2 h-full flex px-10 justify-end items-center space-x-10 text-right text-md tracking-widest font-light">
@@ -115,13 +119,7 @@
 
             
             <img class="w-1/3 h-auto absolute right-0 bottom-0" src="/assets/images/me.jpg" alt="">
-        </section>
-
-        <section id="projetos" class="w-full h-full hidden flex flex-col" style="font-family: 'Ubuntu Mono', monospace;">
-
-        </section>
-        
-        
+        </section>    
     </main>
     <script type="module" src="/assets/js/main.js"></script>
 </body>

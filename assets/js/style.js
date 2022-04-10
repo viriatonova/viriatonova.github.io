@@ -21,13 +21,13 @@ if ( anodev <= 0 ) {
 
 
 // TOGGLE SIDE BAR
-const togglePage = document.querySelector('#togglePage');
-const btmenu = document.querySelector('#btmenu');
-const btclose = document.querySelector('#btclose');
+// const togglePage = document.querySelector('#togglePage');
+// const btmenu = document.querySelector('#btmenu');
+// const btclose = document.querySelector('#btclose');
 
-btmenu.addEventListener('click', function () {
-    togglePage.classList.toggle('hidden');
-});
+// btmenu.addEventListener('click', function () {
+//     togglePage.classList.toggle('hidden');
+// });
 
 // FUNCTIONS
 

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+
+    /* MOBILE */
+
+    .mobile-nav {
+        @apply flex sm:hidden w-full h-auto bg-gray-900
+    }
+
+    .mobile-nav nav {
+        @apply w-full h-full p-2 flex
+    }
+
+    .mobile-nav nav div {
+        @apply w-full flex flex-col items-end mr-4
+    }
+
+    .mobile-nav nav div h2 {
+        @apply w-full text-xl text-right text-white font-normal tracking-wide
+    }
+
+    .mobile-toggle-page {
+        @apply w-full h-screen flex flex-col sm:hidden bg-gray-900
+    }
+
+    .mobile-toggle-page nav {
+        @apply w-full h-auto flex justify-center items-center py-6 px-4 mt-4 
+        tracking-wider text-lg font-semibold text-yellow-100
+    }
+
+    .mobile-toggle-page ul {
+        @apply w-full h-auto py-6 flex justify-center items-center space-x-8
+    }
+
+    .mobile-toggle-page article {
+        @apply w-full h-auto px-4 mt-12 flex flex-col justify-start items-center
+    }
+    
+    
+    /*DESK*/
+
+    body {
+        @apply w-screen h-screen bg-gray-200 relative font-ubuntu
+    }
+
+    body main {
+        @apply w-full h-full hidden sm:flex
+    }
+
+    body aside {
+        @apply w-auto h-full px-4 flex justify-end items-center bg-gray-700
+    }
+
+    body section {
+        @apply w-full h-full flex flex-col font-ubuntu-mono
+    }
+    
+}

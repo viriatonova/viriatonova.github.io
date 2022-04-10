@@ -1,0 +1,24 @@
+{
+  "name": "viriatonova.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css-dev": "npx tailwindcss -i ./tailwind.css -o ./assets/css/main-dev.css -w",
+    "css-prod": "npx tailwindcss -i ./tailwind.css -o ./assets/css/main.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viriatonova/viriatonova.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viriatonova/viriatonova.github.io/issues"
+  },
+  "homepage": "https://github.com/viriatonova/viriatonova.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
