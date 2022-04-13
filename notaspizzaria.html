@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets//css/main.css" rel="stylesheet">
+    <title>Pizzaria Capão Grande</title>
+</head>
+<body class="w-screen h-screen">
+    <nav class="nav-bar">
+        <a class="h-full px-2 nav-link" href="/.">Home</a>
+        <a class="h-full px-2 nav-link" href="/smallapps.html">SmallApps</a>
+    </nav>
+    <main class="notas-main">
+        <header class="h-1/2">
+            <form id="pizza-form" action="/notaspizzaria.html">
+                <div class="input-wraper">
+                    <i class="">Peso</i>
+                    <input class="input-quantidade" type="text" name="nota" 
+                    placeholder="Entre com o valor em Quilogramas"
+                    >
+                </div>
+                <div class="input-wraper">
+                    <i class="">R$</i>
+                    <input class="input-valor" type="text" name="nota" 
+                    placeholder="Entre com o valor em R$"
+                    >
+                </div>
+                <div class="w-full h-full flex space-x-4">
+                    <button class="bt-submit" type="submit">Enviar</button>
+                    <button class="bt-clear">Limpar</button>
+                </div>
+            </form> 
+        </header>
+        <section id="visor" class="h-1/2 flex justify-start items-center mt-12">
+            <ul class="valor-list">
+                <li>
+                    <span class="pizza-tamanho">Pizza Média</span>
+                    <div class="valor-wraper">
+                        <span class="">Quantidade = </span>
+                        <span class="quantidade text-valor"></span>
+                    </div>
+                    <div class="valor-wraper">
+                        <span class="">Valor =</span>
+                        <span class="valor text-valor"></span>
+                    </div>
+                </li>
+                <li>
+                    <span class="pizza-tamanho">Pizzas Família</span>
+                    <div class="valor-wraper"> 
+                        <span class="">Quantidade = </span>
+                        <span class="quantidade2 text-valor"></span>
+                    </div>
+                    <div class="valor-wraper">
+                        <span class="">Valor =</span>
+                        <span class="valor2 text-valor"></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="/assets/js/notas.js"></script>
+</body>
+</html>
