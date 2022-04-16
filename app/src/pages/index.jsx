@@ -4,14 +4,15 @@ import Navbar from '../components/header'
 
 export default function Home() {
     return (
-        <main className="home">
-            <div>
+        <main>
+            <div className="main-wraper">
                 <Navbar />
                 <div className="section-wraper">
-                    <aside className="w-1/3 h-full flex flex-col justify-center px-6 py-2">
+                    <aside className="w-2/5 section-display">
+                        <img></img>
                         <h1 className="title-h1">Hello World</h1>
                     </aside>
-                    <section className="w-2/3 h-full flex flex-col justify-center px-6 py-2">
+                    <section className="w-3/5 border-l border-gray-900 section-display">
                         <h1 className="title-h1">Hello World</h1>
                     </section>
                 </div>

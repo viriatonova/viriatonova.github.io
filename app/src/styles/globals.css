@@ -7,39 +7,64 @@
     /* GLOBAL */
 
     body {
-        @apply w-screen h-screen
+        @apply w-screen h-screen bg-black p-4 font-ibm-sans
+    }
+
+    #__next {
+        @apply w-full h-full bg-white rounded-sm
     }
 
     .title-h1 {
-        @apply text-5xl font-bold tracking-wider text-gray-900
+        @apply text-5xl font-bold tracking-wider text-gray-900 font-ibm-serif
     }
 
     .title-nav {
-        @apply text-3xl font-bold tracking-wider text-gray-900
+        @apply w-full h-full text-2xl font-normal tracking-widest text-gray-900
+        text-justify
     }
 
     /* HOME */
 
-    .home {
-        @apply w-full h-full p-4 bg-gray-900 flex justify-center items-center
+    main {
+        @apply w-full h-full
     }
 
-    .home div {
-        @apply w-full h-full py-8 px-16 bg-white
+    .main-wraper {
+        @apply w-full h-full
     }
 
     .section-wraper {
-        @apply w-full h-full flex justify-center
+        @apply w-full h-auto flex justify-center
+    }
+
+    .section-display {
+        @apply h-full flex flex-col justify-center px-6 py-2
     }
 
     /* NAVBAR */
 
     .vt-nav {
-        @apply w-full h-auto py-2 flex
+        @apply w-full h-auto flex border-b border-gray-900 items-center justify-center
+    }
+
+    .vt-nav div {
+        @apply w-full h-full  ml-8 flex items-end
+    }
+
+    .nav-ul {
+        @apply w-full h-auto flex justify-end items-center
+    }
+    .nav-ul li {
+        @apply w-40 h-full py-2 px-6 hover:bg-yellow-300 border-l border-gray-900
+        flex justify-center items-center
     }
 
     .nav-link {
-        @apply w-full h-full px-4 py-2 border-r hover:bg-yellow-300
+        @apply w-full h-full text-center flex justify-center items-center
+    }
+
+    .nav-link span {
+        @apply w-full h-full
     }
 
 }
