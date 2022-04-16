@@ -5,15 +5,15 @@ import github from "../dist/svg/github.png"
 
 const Social = () => {
     return (
-        <div className="py-4 flex justtify-start items-center">
-            <span className="font-ibm-mono text-lg">Follow me:</span>
+        <div className="py-2 flex justtify-start items-center">
+            <span className="font-ibm-mono text-md">Follow me:</span>
             <ul className="flex items-center ml-4">
                 <li>
                     <a href="">
                         <Image
                             src={github}
-                            width={35}
-                            height={35}
+                            width={30}
+                            height={30}
                         />
                     </a>
                 </li>
@@ -21,8 +21,8 @@ const Social = () => {
                     <a href="">
                         <Image
                             src={instagram}
-                            width={35}
-                            height={35}
+                            width={30}
+                            height={30}
                         />
                     </a>
                 </li>
@@ -30,8 +30,8 @@ const Social = () => {
                     <a href="">
                         <Image
                             src={facebook}
-                            width={35}
-                            height={35}
+                            width={30}
+                            height={30}
                         />
                     </a>
                 </li>

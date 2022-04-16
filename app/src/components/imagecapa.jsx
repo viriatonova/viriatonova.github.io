@@ -1,13 +1,13 @@
 import Image from 'next/image'
-import capa from '../dist/img/capa.jpg'
+import capa from '../dist/img/capa.png'
 
 const ImageCapa = () => {
     return (
-        <div className="w-full h-1/3 relative">
+        <div className="w-auto h-auto relative">
             <Image
                 src={capa}
-                width={1080}
-                height={720}
+                width={540}
+                height={301}
                 className="img-capa"
             />
             <span className="img-back">nada</span>
