@@ -6,12 +6,8 @@
 
     /* GLOBAL */
 
-    body {
-        @apply w-screen h-screen bg-black p-4 font-ibm-sans
-    }
-
     #__next {
-        @apply w-full h-full bg-white rounded-sm
+        @apply w-screen h-screen bg-black p-4 font-ibm-sans absolute inset-0
     }
 
     .title-h1 {
@@ -31,15 +27,11 @@
     /* HOME */
 
     main {
-        @apply w-full h-full
-    }
-
-    .main-wraper {
-        @apply w-full h-full
+        @apply w-full h-full bg-white rounded-sm
     }
 
     .section-wraper {
-        @apply w-full h-auto flex justify-center
+        @apply w-full h-full flex justify-center
     }
 
     .section-display {
@@ -89,5 +81,15 @@
     }
     .post section{
         @apply w-2/3 h-40 px-12 flex justify-start items-center
+    }
+
+    /* FOOTER */
+
+    .vt-footer {
+        @apply w-full h-auto flex border-t border-gray-900 items-center justify-start
+    }
+
+    .vt-footer div {
+        @apply w-full h-auto ml-2
     }
 }

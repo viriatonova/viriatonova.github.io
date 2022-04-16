@@ -5,7 +5,7 @@ import github from "../dist/svg/github.png"
 
 const Social = () => {
     return (
-        <div className="h-1/3 flex items-end mt-12">
+        <div className="py-4 flex justtify-start items-center">
             <span className="font-ibm-mono text-lg">Follow me:</span>
             <ul className="flex items-center ml-4">
                 <li>
