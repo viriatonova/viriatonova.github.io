@@ -12,7 +12,8 @@
     }
 
     .title-nav {
-        @apply w-full text-2xl font-medium tracking-widest text-gray-900
+        @apply w-full text-4xl ml-4 py-2 font-medium tracking-widest text-gray-900
+        capitalize
     }
 
     /* HOME */
@@ -73,14 +74,14 @@
         @apply w-full h-auto flex border-b border-gray-900 items-center justify-center
     }
 
-    .menu-left {
-        @apply w-full h-full text-lg font-light ml-6 tracking-wider text-gray-900
-        flex justify-start items-center
+    .menu-letf {
+        @apply flex justify-center items-center
     }
 
     .nav-ul {
-        @apply w-full h-auto flex justify-end items-center
+        @apply w-full h-full flex justify-end items-center
     }
+
     .nav-ul li {
         @apply w-40 h-full py-2 px-6 hover:bg-yellow-300 border-l border-gray-900
         flex justify-center items-center
