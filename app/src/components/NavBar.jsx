@@ -7,7 +7,9 @@ const NavBar = () => {
     return (
         <nav className="vt-nav">
             <div>
-                <h2>Frontend Web Developer</h2>
+                <a href="mailto:viriatosampaio@gmail.com">
+                    Contact me
+                </a>
             </div>
             <ul className="nav-list">
                 <li className={router.pathname == "/" ? "nav-link-active" : "nav-link-inactive link-underline link-underline-black"}>

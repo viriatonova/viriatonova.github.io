@@ -7,8 +7,9 @@
     /* GLOBAL */
 
     body #__next {
-        @apply w-screen h-screen bg-black text-white font-ibm-sans text-base
-        flex flex-col justify-center items-center
+        @apply w-screen h-screen flex flex-col justify-center items-center
+        bg-gradient-to-l from-black to-gray-900
+        text-white font-ibm-sans text-base
     }
 
     /* HOME */
@@ -17,15 +18,33 @@
         @apply w-full h-full flex flex-col justify-center items-center
     }
 
+    .home-principal {
+        @apply w-full h-full flex justify-center items-center
+    }
+
+    .home-principal section {
+        @apply w-auto h-full flex justify-center items-center
+    }
+
+    .home-principal aside {
+        @apply w-3/4 h-full mr-12 flex justify-center items-center
+    }
+
+    .home-box {
+        @apply w-1/2 h-full
+        flex flex-col justify-start items-center
+        space-y-12
+    }
+
     /* HEADER */
 
     .vt-nav {
-        @apply w-full h-auto px-12 py-16 flex justify-start items-center
+        @apply w-full h-auto px-12 py-4 flex justify-start items-center
     }
 
     .vt-nav div {
-        @apply w-1/4 h-full flex justify-start items-center font-ibm-mono
-        font-light
+        @apply w-1/4 h-full flex justify-start items-center font-ibm-sans
+        font-normal text-xl text-cyan-400
     }
 
     .nav-list {
@@ -51,7 +70,42 @@
         space-x-12
     }
 
+    /* HELLO */
 
+    .hello-wraper {
+        @apply w-full h-full p-12 flex flex-col justify-center items-center
+    }
 
+    .hello-wraper h2 {
+        @apply w-full h-auto text-center flex justify-start items-center
+        font-ibm-serif font-bold text-8xl
+    }
+
+    .hello-wraper h3 {
+        @apply w-full h-auto mt-2 flex justify-start items-center
+        font-ibm-sans font-normal text-2xl tracking-wider
+    }
+
+    /* IMAGE HOME */
+
+    .image-back {
+        @apply w-full h-full absolute bg-black top-1 left-2 z-10 rounded-sm
+    }
+
+    .image-back-2 {
+        @apply w-full h-full absolute bg-gray-300 top-3 left-4 z-0 rounded-sm
+    }
+
+    /* BOX */
+
+    .box-wraper {
+        @apply w-auto h-auto p-6 mt-12
+        flex flex-col justify-center items-center
+        border border-gray-800 rounded-md
+    }
+
+    .box-svg {
+        @apply text-white
+    }
 
 }
