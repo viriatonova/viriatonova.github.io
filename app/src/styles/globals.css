@@ -34,7 +34,12 @@
     }
 
     .nav-link {
-        @apply py-2 relative tracking-widest font-ibm-sans font-bold border-b-4
+        @apply py-2
+    }
+
+    .nav-link-text {
+        @apply relative tracking-widest font-ibm-sans font-bold border-b-4
+        border-gray-600
     }
 
     .nav-social {
