@@ -1,20 +1,33 @@
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { useRouter } from "next/router";
+import { useEffect } from 'react';
 
-export default function Navbar ({ router }) {
-    const { asPath } = useRouter()
-    const name = asPath.match(/[A-Za-z]/g);
+const NavBar = () => {
+    const { asPath } = useRouter();
+    const [name, setName] = useState('');
+
+    useEffect(() =>{
+        const navLink = document.querySelector('.nav-link');
+        navLink.addEventListener('click', () => {
+            setName('border-pink-400')
+        });
+    },[name]);
 
     return (
         <nav className="vt-nav">
-            <div className="menu-left">
-                <h1 className="title-nav">{name}</h1>
+            <div>
+                <h2>Frontend Web Developer</h2>
             </div>
-            <ul className="nav-ul">
-                <li><a href="/" className="nav-link"><span>Home</span></a></li>
-                <li><a href="/portifolio" className="nav-link"><span>Portifólio</span></a></li>
-                <li><a href="/smallapps" className="nav-link"><span>Small-Apps</span></a></li>
+            <ul className="nav-list">
+                <li><a className={`nav-link ${name}`} href="/">Home</a></li>
+                <li><a className={`nav-link ${name}`} href="/portifolio">Portifolio</a></li>
+                <li><a className={`nav-link ${name}`} href="/smallapps">Smallapps</a></li>
+            </ul>
+            <ul className="nav-social">
+                <li>Instagram</li>
+                <li>Github</li>
             </ul>
         </nav>
     )
-}
+};
+export default NavBar
