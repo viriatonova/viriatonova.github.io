@@ -4,7 +4,9 @@
 
 @layer components {
 
-    /* GLOBAL */
+    /*
+    *  GLOBAL ELEMENTS
+    */
 
     body #__next {
         @apply w-screen h-screen flex flex-col justify-center items-center
@@ -12,7 +14,9 @@
         text-white font-ibm-sans text-base
     }
 
-    /* HOME */
+    /*
+    *  HOME PAGE SYTLES
+    */
 
     .home-wraper {
         @apply w-full h-full flex flex-col justify-center items-center
@@ -141,5 +145,50 @@
     .box-image {
         @apply rounded-md
     }
+
+
+    /*
+    * PORTIFOLIO PAGE STYLES
+    */
+
+    .portifolio-wraper {
+        @apply w-full h-full flex flex-col justify-center items-center
+    }
+
+    .portifolio-wraper section {
+        @apply w-full h-full
+
+    }
+
+    /* PROJETOS */
+
+    .projetos-wraper {
+        @apply w-full h-full p-12
+        grid grid-cols-3 grid-flow-row gap-12
+        justify-start items-start
+    }
+
+    .projetos{
+        @apply w-full h-full p-2
+    }
+
+    .projetos h3 {
+        @apply w-full h-auto mt-2
+        text-2xl font-ibm-serif font-semibold
+    }
+
+    .projetos a {
+        @apply w-full h-auto
+        text-base font-ibm-mono tracking-widest
+        text-cyan-400
+    }
+
+    .projetos p {
+        @apply w-4/5 h-auto
+        text-lg font-ibm-sans mt-2 text-justify
+        tracking-wide
+    }
+
+
 
 }

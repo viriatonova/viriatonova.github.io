@@ -14,14 +14,14 @@ const Home = () => {
                         <div className="w-1/2 h-auto">
                             <p className="home-text-area">
                                 I'm a curious, creative and analityc person.
-                                Always researching for new knowge, studing about
-                                any subject that open my mind
+                                Always researching for new knowledges, studing about
+                                any thing that open my mind
                             </p>
                             <p className="home-text-area mt-6">
                                 I started my carieer as project engineer in the
                                 civil construction but always stay in touch width
-                                tecnologe. In 2020 finally migrated to Web Development,
-                                where now I thing make me feel "one with the force", like
+                                tecnology. In 2020 finally migrated to Web Development,
+                                where now I thing make me feel like "one with the force", as
                                 a geek that I ever was. :)
                             </p>
                             <p className="home-text-area mt-6">

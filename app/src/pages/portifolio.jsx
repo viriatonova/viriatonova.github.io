@@ -1,9 +1,12 @@
 import NavBar from '../components/NavBar';
+import Projetos from '../components/projetos';
 
 const Portifolio = () => {
     return (
-        <main className="home-wraper">
-            <h1 className="w-full h-full flex justify-center items-center">portifolio</h1>
+        <main className="portifolio-wraper">
+            <section>
+                <Projetos />
+            </section>
             <NavBar />
         </main>
     )
