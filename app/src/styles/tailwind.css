@@ -23,17 +23,28 @@
     }
 
     .home-principal section {
-        @apply w-auto h-full flex justify-center items-center
+        @apply w-1/2 h-full flex px-12 flex-col justify-center items-start
     }
 
     .home-principal aside {
-        @apply w-3/4 h-full mr-12 flex justify-center items-center
+        @apply w-1/2 h-full flex justify-center items-center
     }
 
     .home-box {
-        @apply w-1/2 h-full
+        @apply w-full h-full
         flex flex-col justify-start items-center
-        space-y-12
+    }
+
+    .home-text-area {
+        @apply w-full h-full ml-12
+        text-lg font-light font-ibm-mono tracking-wide
+        text-justify
+    }
+
+    .home-text-area-out {
+        @apply w-full h-full
+        text-sm font-light font-ibm-mono tracking-wide
+        text-justify text-gray-400
     }
 
     /* HEADER */
@@ -70,42 +81,65 @@
         space-x-12
     }
 
+    .contact {
+        @apply w-auto h-auto px-4 py-2
+        text-lg font-ibm-sans tracking-widest
+        border border-cyan-400
+        hover:bg-cyan-900 hover:text-white
+        hover:border-none hover:font-semibold
+        active:bg-pink-700
+    }
+
     /* HELLO */
 
     .hello-wraper {
-        @apply w-full h-full p-12 flex flex-col justify-center items-center
+        @apply w-full h-auto py-16 flex flex-col justify-start items-start
     }
 
     .hello-wraper h2 {
         @apply w-full h-auto text-center flex justify-start items-center
-        font-ibm-serif font-bold text-8xl
+        font-ibm-serif font-bold text-9xl
     }
 
     .hello-wraper h3 {
-        @apply w-full h-auto mt-2 flex justify-start items-center
-        font-ibm-sans font-normal text-2xl tracking-wider
+        @apply w-full h-auto mt-4 flex justify-start items-center
+        font-ibm-sans font-semibold text-4xl tracking-wider
     }
 
     /* IMAGE HOME */
 
     .image-back {
-        @apply w-full h-full absolute bg-black top-1 left-2 z-10 rounded-sm
+        @apply w-full h-full absolute bg-black top-1 left-2 z-10 rounded-md
     }
 
     .image-back-2 {
-        @apply w-full h-full absolute bg-gray-300 top-3 left-4 z-0 rounded-sm
+        @apply w-full h-full absolute bg-gray-300 top-2 left-4 z-0 rounded-md
     }
 
     /* BOX */
 
     .box-wraper {
-        @apply w-auto h-auto p-6 mt-12
+        @apply w-auto h-1/2 py-12 mt-6 px-12
+        grid grid-cols-4 grid-flow-row gap-12
+        justify-center items-center
+    }
+
+    .box {
+        @apply w-auto h-auto px-6 py-4
         flex flex-col justify-center items-center
         border border-gray-800 rounded-md
     }
 
+    .box h3 {
+        @apply py-2 text-base font-ibm-mono tracking-wide
+    }
+
     .box-svg {
         @apply text-white
+    }
+
+    .box-image {
+        @apply rounded-md
     }
 
 }
