@@ -189,6 +189,62 @@
         tracking-wide
     }
 
+    /*
+    * SMALLAPPS PAGE STYLES
+    */
 
+    .smallapps-wraper {
+        @apply w-full h-full flex flex-col justify-center items-center
+    }
+
+    .apps  {
+        @apply w-full h-full p-12
+        grid grid-cols-3 grid-flow-row gap-12
+        justify-start items-start
+    }
+
+    .apps h1 {
+        @apply w-full h-full p-2
+    }
+
+    /* VTAPPS */
+
+    .vtapps-wraper {
+        @apply w-full h-full p-2
+        grid grid-cols-2 grid-flow-row gap-12
+        justify-start items-start
+    }
+
+    .vtapps {
+        @apply w-full h-96
+        flex flex-col p-4  cursor-pointer
+        border border-gray-400 rounded-md
+        justify-start items-center
+    }
+
+    .vtapps h3 {
+        @apply w-full h-auto py-2
+        text-xl font-ibm-serif font-semibold
+    }
+
+    .vtapps p {
+        @apply w-full h-auto
+        text-base font-ibm-sans
+        tracking-wide text-justify
+    }
+
+    /*
+    * NOTAS PAGE STYLES
+    */
+
+    .notas-wraper {
+        @apply w-full h-full p-2 flex flex-col
+        justify-center items-center
+    }
+
+    .notas {
+        @apply w-full h-full p-4
+        flex flex-col justify-center items-start
+    }
 
 }

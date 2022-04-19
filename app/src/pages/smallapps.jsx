@@ -1,10 +1,13 @@
-import Navbar from '../components/NavBar';
+import NavBar from '../components/NavBar';
+import Vtapps from '../components/vtapps';
 
 const Smallapps = () => {
     return (
-        <main className="home-wraper">
-            <h1 className="w-full h-full flex justify-center items-center">smallapps</h1>
-            <Navbar />
+        <main className="smallapps-wraper">
+            <section className="apps">
+                <Vtapps />
+            </section>
+            <NavBar />
         </main>
     )
 }
