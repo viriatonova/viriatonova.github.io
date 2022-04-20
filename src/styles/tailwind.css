@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /*
+    *  GLOBAL ELEMENTS
+    */
+
+    body #__next {
+        @apply w-screen h-screen flex flex-col justify-center items-center
+        bg-gradient-to-l from-black to-gray-800
+        text-white font-ibm-sans text-base
+    }
+
+    /*
+    *  HOME PAGE SYTLES
+    */
+
+    .home-wraper {
+        @apply w-full h-full flex flex-col justify-center items-center
+    }
+
+    .home-principal {
+        @apply w-full h-full flex justify-center items-center
+    }
+
+    .home-principal section {
+        @apply w-1/2 h-full flex px-12 flex-col justify-center items-start
+    }
+
+    .home-principal aside {
+        @apply w-1/2 h-full flex justify-center items-center
+    }
+
+    .home-box {
+        @apply w-full h-full
+        flex flex-col justify-start items-center
+    }
+
+    .home-text-area {
+        @apply w-full h-full ml-12
+        text-lg font-light font-ibm-mono tracking-wide
+        text-justify
+    }
+
+    .home-text-area-out {
+        @apply w-full h-full
+        text-sm font-light font-ibm-mono tracking-wide
+        text-justify text-gray-400
+    }
+
+    /* HEADER */
+
+    .vt-nav {
+        @apply w-full h-auto px-12 py-4 flex justify-start items-center
+    }
+
+    .vt-nav div {
+        @apply w-1/4 h-full flex justify-start items-center font-ibm-sans
+        font-normal text-xl text-cyan-400
+    }
+
+    .nav-list {
+        @apply w-full h-full px-12 flex justify-center items-center
+        space-x-16 text-xl
+    }
+
+    .nav-link-inactive {
+        @apply py-2
+    }
+
+    .nav-link-active {
+        @apply py-2 border-b-4 border-cyan-400
+    }
+
+    .nav-link-text {
+        @apply relative tracking-widest font-ibm-sans font-bold border-b-4
+        border-gray-600
+    }
+
+    .nav-social {
+        @apply w-1/4 h-full px-12 flex justify-end items-center
+        space-x-12
+    }
+
+    .contact {
+        @apply w-auto h-auto px-4 py-2
+        text-lg font-ibm-sans tracking-widest
+        border border-cyan-400
+        hover:bg-cyan-400 hover:text-cyan-900
+        hover:border-none hover:font-semibold
+        active:bg-pink-700
+    }
+
+    /* HELLO */
+
+    .hello-wraper {
+        @apply w-full h-auto py-16 flex flex-col justify-start items-start
+    }
+
+    .hello-wraper h2 {
+        @apply w-full h-auto text-center flex justify-start items-center
+        font-ibm-serif font-bold text-9xl
+    }
+
+    .hello-wraper h3 {
+        @apply w-full h-auto mt-4 flex justify-start items-center
+        font-ibm-sans font-semibold text-4xl tracking-wider
+    }
+
+    /* IMAGE HOME */
+
+    .image-back {
+        @apply w-full h-full absolute bg-black top-1 left-2 z-10 rounded-md
+    }
+
+    .image-back-2 {
+        @apply w-full h-full absolute bg-gray-300 top-2 left-4 z-0 rounded-md
+    }
+
+    /* BOX */
+
+    .box-wraper {
+        @apply w-auto h-1/2 py-12 mt-6 px-12
+        grid grid-cols-4 grid-flow-row gap-12
+        justify-center items-center
+    }
+
+    .box {
+        @apply w-auto h-auto px-6 py-4
+        flex flex-col justify-center items-center
+        border border-gray-800 rounded-md
+    }
+
+    .box h3 {
+        @apply py-2 text-base font-ibm-mono tracking-wide
+    }
+
+    .box-svg {
+        @apply text-white
+    }
+
+    .box-image {
+        @apply rounded-md
+    }
+
+
+    /*
+    * PORTIFOLIO PAGE STYLES
+    */
+
+    .portifolio-wraper {
+        @apply w-full h-full flex flex-col justify-center items-center
+    }
+
+    .portifolio-wraper section {
+        @apply w-full h-full
+
+    }
+
+    /* PROJETOS */
+
+    .projetos-wraper {
+        @apply w-full h-full p-12
+        grid grid-cols-3 grid-flow-row gap-12
+        justify-start items-start
+    }
+
+    .projetos{
+        @apply w-full h-full p-2
+    }
+
+    .projetos h3 {
+        @apply w-full h-auto mt-2
+        text-2xl font-ibm-serif font-semibold
+    }
+
+    .projetos a {
+        @apply w-full h-auto
+        text-base font-ibm-mono tracking-widest
+        text-cyan-400
+    }
+
+    .projetos p {
+        @apply w-4/5 h-auto
+        text-lg font-ibm-sans mt-2 text-justify
+        tracking-wide
+    }
+
+    /*
+    * SMALLAPPS PAGE STYLES
+    */
+
+    .smallapps-wraper {
+        @apply w-full h-full flex flex-col justify-center items-center
+    }
+
+    .apps  {
+        @apply w-full h-full p-12
+        grid grid-cols-3 grid-flow-row gap-12
+        justify-start items-start
+    }
+
+    .apps h1 {
+        @apply w-full h-full p-2
+    }
+
+    /* VTAPPS */
+
+    .vtapps-wraper {
+        @apply w-full h-full p-2
+        grid grid-cols-2 grid-flow-row gap-12
+        justify-start items-start
+    }
+
+    .vtapps {
+        @apply w-full h-96
+        flex flex-col p-4  cursor-pointer
+        border border-gray-400 rounded-md
+        justify-start items-center
+    }
+
+    .vtapps h3 {
+        @apply w-full h-auto py-2
+        text-xl font-ibm-serif font-semibold
+    }
+
+    .vtapps p {
+        @apply w-full h-auto
+        text-base font-ibm-sans
+        tracking-wide text-justify
+    }
+
+    /*
+    * NOTAS PAGE STYLES
+    */
+
+    .notas-wraper {
+        @apply w-full h-full p-2 flex flex-col
+        justify-center items-center
+    }
+
+    .notas {
+        @apply w-2/3 h-full
+        flex flex-col justify-start items-center
+    }
+
+    .notas article {
+        @apply w-2/3 h-auto py-12
+        flex justify-start items-center
+        space-x-6
+    }
+
+    .notas-article-form {
+        @apply w-1/2 h-full
+        flex flex-col justify-start items-center
+    }
+
+    .notas-article-form h3 {
+        @apply w-full h-auto py-16
+        text-3xl font-ibm-serif font-semibold
+        text-cyan-400
+    }
+
+    .notas-form {
+        @apply w-full h-auto
+        flex flex-col justify-center items-center
+    }
+
+    .notas-input-wraper {
+        @apply w-full h-auto
+        flex justify-start items-center
+        space-x-2
+    }
+
+    .notas-input-wraper label {
+        @apply w-1/2 text-2xl
+        font-ibm-sans font-normal
+    }
+
+    .notas-input {
+        @apply w-full py-2 px-2
+        focus:outline-none rounded-md
+        text-black text-2xl font-ibm-sans
+    }
+
+    .notas-button {
+        @apply w-full flex mt-12
+        justify-end space-x-6
+    }
+
+    .results-wraper {
+        @apply w-full flex
+        justify-start items-center
+        space-x-6
+    }
+
+    .results-wraper h3 {
+        @apply w-1/2 flex
+        text-2xl font-ibm-sans font-semibold
+    }
+
+    .results {
+        @apply w-full flex p-2
+        justify-start items-center
+        space-x-6 border border-gray-700
+
+    }
+
+    .results span {
+        @apply w-full flex
+        text-lg font-ibm-mono
+    }
+
+    .text-valor {
+        @apply text-red-500
+    }
+
+
+}

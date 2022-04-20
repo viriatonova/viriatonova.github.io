@@ -1,0 +1,50 @@
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#22d3ee, #22d3ee)
+}
+
+.link-underline:hover {
+    background-size: 100% 4px;
+    background-position: 0 100%
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+
+    .reverse {
+      animation: App-logo-spin-reverse infinite 20s linear;
+    }
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes App-logo-spin-reverse {
+    from {
+      transform: rotate(560deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
