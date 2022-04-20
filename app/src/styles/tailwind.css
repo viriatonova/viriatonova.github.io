@@ -10,7 +10,7 @@
 
     body #__next {
         @apply w-screen h-screen flex flex-col justify-center items-center
-        bg-gradient-to-l from-black to-gray-900
+        bg-gradient-to-l from-black to-gray-800
         text-white font-ibm-sans text-base
     }
 
@@ -89,7 +89,7 @@
         @apply w-auto h-auto px-4 py-2
         text-lg font-ibm-sans tracking-widest
         border border-cyan-400
-        hover:bg-cyan-900 hover:text-white
+        hover:bg-cyan-400 hover:text-cyan-900
         hover:border-none hover:font-semibold
         active:bg-pink-700
     }
@@ -243,8 +243,80 @@
     }
 
     .notas {
-        @apply w-full h-full p-4
-        flex flex-col justify-center items-start
+        @apply w-2/3 h-full
+        flex flex-col justify-start items-center
     }
+
+    .notas article {
+        @apply w-2/3 h-auto py-12
+        flex justify-start items-center
+        space-x-6
+    }
+
+    .notas-article-form {
+        @apply w-1/2 h-full
+        flex flex-col justify-start items-center
+    }
+
+    .notas-article-form h3 {
+        @apply w-full h-auto py-16
+        text-3xl font-ibm-serif font-semibold
+        text-cyan-400
+    }
+
+    .notas-form {
+        @apply w-full h-auto
+        flex flex-col justify-center items-center
+    }
+
+    .notas-input-wraper {
+        @apply w-full h-auto
+        flex justify-start items-center
+        space-x-2
+    }
+
+    .notas-input-wraper label {
+        @apply w-1/2 text-2xl
+        font-ibm-sans font-normal
+    }
+
+    .notas-input {
+        @apply w-full py-2 px-2
+        focus:outline-none rounded-md
+        text-black text-2xl font-ibm-sans
+    }
+
+    .notas-button {
+        @apply w-full flex mt-12
+        justify-end space-x-6
+    }
+
+    .results-wraper {
+        @apply w-full flex
+        justify-start items-center
+        space-x-6
+    }
+
+    .results-wraper h3 {
+        @apply w-1/2 flex
+        text-2xl font-ibm-sans font-semibold
+    }
+
+    .results {
+        @apply w-full flex p-2
+        justify-start items-center
+        space-x-6 border border-gray-700
+
+    }
+
+    .results span {
+        @apply w-full flex
+        text-lg font-ibm-mono
+    }
+
+    .text-valor {
+        @apply text-red-500
+    }
+
 
 }
