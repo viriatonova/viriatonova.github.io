@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import Instagram from "../../public/instagram.png"
-import Github from "../../public/github.png"
 import CustomLoader from "../helpers/CustomLoader";
+import Prefix from "../helpers/Prefix"
 
 const NavBar = () => {
     const router = useRouter();
@@ -31,7 +30,7 @@ const NavBar = () => {
                     <a href="https://github.com/viriatonova" target="_blank">
                         <Image
                             loader={CustomLoader}
-                            src={Github}
+                            src={`${Prefix}/github.png`}
                             alt="Picture of the author"
                             width={40}
                             height={40}
@@ -43,7 +42,7 @@ const NavBar = () => {
                     <a href="https://www.instagram.com/viriato_nova/" target="_blank">
                         <Image
                             loader={CustomLoader}
-                            src={Instagram}
+                            src={`${Prefix}/instagram.png`}
                             alt="Picture of the author"
                             width={30}
                             height={30}

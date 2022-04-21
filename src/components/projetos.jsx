@@ -1,8 +1,6 @@
 import Image from "next/image"
-import Stricto from "../../public/stricto.png"
-import Megaterio from "../../public/megaterio.png"
-import Personal from "../../public/personalpage.png"
 import CustomLoader from "../helpers/CustomLoader"
+import Prefix from "../helpers/Prefix"
 
 const Projetos = () => {
     return (
@@ -10,7 +8,7 @@ const Projetos = () => {
             <div className="projetos">
                 <Image
                 loader={CustomLoader}
-                src={Personal}
+                src={`${Prefix}/personalpage.png`}
                 alt="Picture of the author"
                 width={480}
                 height={270}
@@ -26,7 +24,7 @@ const Projetos = () => {
             <div className="projetos">
                 <Image
                 loader={CustomLoader}
-                src={Stricto}
+                src={`${Prefix}/stricto.png`}
                 alt="Picture of the author"
                 width={480}
                 height={270}
@@ -43,7 +41,7 @@ const Projetos = () => {
             <div className="projetos">
                 <Image
                 loader={CustomLoader}
-                src={Megaterio}
+                src={`${Prefix}/megaterio.png`}
                 alt="Picture of the author"
                 width={480}
                 height={270}

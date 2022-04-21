@@ -1,10 +1,6 @@
 import Image from "next/image"
-import Js from "../../public/js.png"
-import Next from "../../public/next.png"
-import React from "../../public/react.png"
-import Node from "../../public/node.png"
-import Tailwind from "../../public/tailwind.png"
 import CustomLoader from "../helpers/CustomLoader"
+import Prefix from "../helpers/Prefix"
 
 const Box = () => {
     return (
@@ -13,7 +9,7 @@ const Box = () => {
                 <h3>JavaScript</h3>
                 <Image
                 loader={CustomLoader}
-                src={Js}
+                src={`${Prefix}/js.png`}
                 alt="Picture of the author"
                 width={100}
                 height={100}
@@ -24,7 +20,7 @@ const Box = () => {
                 <h3>ReactJS</h3>
                 <Image
                     loader={CustomLoader}
-                    src={React}
+                    src={`${Prefix}/react.png`}
                     alt="Picture of the author"
                     width={100}
                     height={100}
@@ -35,7 +31,7 @@ const Box = () => {
                 <h3>NextJS</h3>
                 <Image
                     loader={CustomLoader}
-                    src={Next}
+                    src={`${Prefix}/next.png`}
                     alt="Picture of the author"
                     width={100}
                     height={100}
@@ -46,7 +42,7 @@ const Box = () => {
                 <h3>Node JS</h3>
                 <Image
                     loader={CustomLoader}
-                    src={Node}
+                    src={`${Prefix}/node.png`}
                     alt="Picture of the author"
                     width={100}
                     height={100}
@@ -57,7 +53,7 @@ const Box = () => {
                 <h3>TailwindCss</h3>
                 <Image
                     loader={CustomLoader}
-                    src={Tailwind}
+                    src={`${Prefix}/tailwind.png`}
                     alt="Picture of the author"
                     width={100}
                     height={100}

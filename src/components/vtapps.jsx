@@ -1,9 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
-import Notas from "../dist/img/notas.jpg"
-import Password from "../dist/img/password.jpeg"
 import CustomLoader from "../helpers/CustomLoader";
-
+import Prefix from "../helpers/Prefix"
 
 const Vtapps = () => {
     return (
@@ -12,7 +10,7 @@ const Vtapps = () => {
                 <div className="vtapps">
                     <Image
                     loader={CustomLoader}
-                    src={Notas}
+                    src={`${Prefix}/notas.png`}
                     alt="Picture of the author"
                     width={220}
                     height={200}
@@ -29,7 +27,7 @@ const Vtapps = () => {
                 <div className="vtapps">
                     <Image
                     loader={CustomLoader}
-                    src={Password}
+                    src={`${Prefix}/password.png`}
                     alt="Picture of the author"
                     width={220}
                     height={200}
