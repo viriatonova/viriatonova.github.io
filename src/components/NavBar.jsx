@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Instagram from "../dist/img/instagram.png"
 import Github from "../dist/img/github.png"
+import CustomLoader from "../helpers/CustomLoader";
 
 const NavBar = () => {
     const router = useRouter();
@@ -29,6 +30,7 @@ const NavBar = () => {
                 <li>
                     <a href="https://github.com/viriatonova" target="_blank">
                         <Image
+                            loader={CustomLoader}
                             src={Github}
                             alt="Picture of the author"
                             width={40}
@@ -40,6 +42,7 @@ const NavBar = () => {
                 <li>
                     <a href="https://www.instagram.com/viriato_nova/" target="_blank">
                         <Image
+                            loader={CustomLoader}
                             src={Instagram}
                             alt="Picture of the author"
                             width={30}

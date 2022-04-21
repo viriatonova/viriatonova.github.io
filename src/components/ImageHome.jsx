@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Me from "../dist/img/me.jpg"
+import CustomLoader from '../helpers/CustomLoader'
 
 const ImageHome = () => {
     return (
         <div className="w-auto h-auto relative">
             <Image
+                loader={CustomLoader}
                 src={Me}
                 alt="Picture of the author"
                 width={315}

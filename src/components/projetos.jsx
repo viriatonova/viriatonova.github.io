@@ -2,12 +2,14 @@ import Image from "next/image"
 import Stricto from "../dist/img/stricto.png"
 import Megaterio from "../dist/img/megaterio.png"
 import Personal from "../dist/img/personalpage.png"
+import CustomLoader from "../helpers/CustomLoader"
 
 const Projetos = () => {
     return (
         <div className="projetos-wraper">
             <div className="projetos">
                 <Image
+                loader={CustomLoader}
                 src={Personal}
                 alt="Picture of the author"
                 width={480}
@@ -23,6 +25,7 @@ const Projetos = () => {
             </div>
             <div className="projetos">
                 <Image
+                loader={CustomLoader}
                 src={Stricto}
                 alt="Picture of the author"
                 width={480}
@@ -39,6 +42,7 @@ const Projetos = () => {
             </div>
             <div className="projetos">
                 <Image
+                loader={CustomLoader}
                 src={Megaterio}
                 alt="Picture of the author"
                 width={480}

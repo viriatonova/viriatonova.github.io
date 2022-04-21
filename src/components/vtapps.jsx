@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link";
 import Notas from "../dist/img/notas.jpg"
 import Password from "../dist/img/password.jpeg"
+import CustomLoader from "../helpers/CustomLoader";
 
 
 const Vtapps = () => {
@@ -10,6 +11,7 @@ const Vtapps = () => {
             <Link href="/notas">
                 <div className="vtapps">
                     <Image
+                    loader={CustomLoader}
                     src={Notas}
                     alt="Picture of the author"
                     width={220}
@@ -26,6 +28,7 @@ const Vtapps = () => {
             <Link href="/">
                 <div className="vtapps">
                     <Image
+                    loader={CustomLoader}
                     src={Password}
                     alt="Picture of the author"
                     width={220}
