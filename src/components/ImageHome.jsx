@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Me from "../dist/img/me.jpg"
+import Me from "../../public/me.jpg"
 import CustomLoader from '../helpers/CustomLoader'
 
 const ImageHome = () => {

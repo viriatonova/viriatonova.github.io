@@ -1,9 +1,9 @@
 import Image from "next/image"
-import Js from "../dist/img/js.png"
-import Next from "../dist/img/next.png"
-import React from "../dist/img/react.png"
-import Node from "../dist/img/node.png"
-import Tailwind from "../dist/img/tailwind.png"
+import Js from "../../public/js.png"
+import Next from "../../public/next.png"
+import React from "../../public/react.png"
+import Node from "../../public/node.png"
+import Tailwind from "../../public/tailwind.png"
 import CustomLoader from "../helpers/CustomLoader"
 
 const Box = () => {

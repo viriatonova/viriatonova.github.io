@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import Instagram from "../dist/img/instagram.png"
-import Github from "../dist/img/github.png"
+import Instagram from "../../public/instagram.png"
+import Github from "../../public/github.png"
 import CustomLoader from "../helpers/CustomLoader";
 
 const NavBar = () => {

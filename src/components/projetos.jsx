@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Stricto from "../dist/img/stricto.png"
-import Megaterio from "../dist/img/megaterio.png"
-import Personal from "../dist/img/personalpage.png"
+import Stricto from "../../public/stricto.png"
+import Megaterio from "../../public/megaterio.png"
+import Personal from "../../public/personalpage.png"
 import CustomLoader from "../helpers/CustomLoader"
 
 const Projetos = () => {
