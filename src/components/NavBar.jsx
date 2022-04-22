@@ -29,7 +29,7 @@ const NavBar = () => {
                         <img
                             src={`${Prefix}/github.png`}
                             alt="Picture of the author"
-                            className="box-image w-10"
+                            className="w-10 h-auto"
                         />
                     </a>
                 </li>
@@ -38,7 +38,7 @@ const NavBar = () => {
                         <img
                             src={`${Prefix}/instagram.png`}
                             alt="Picture of the author"
-                            className="box-image w-8"
+                            className="w-8 h-auto"
                         />
                     </a>
                 </li>

@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
 import React, { useState, useEffect } from 'react'
+import MobileNav from "../components/MobileNav"
 
 const calcular = (peso, valor) => {
     const pesoMedia = (peso / 2) / 0.48;
@@ -38,6 +39,8 @@ const Notas = () => {
 
     return (
         <main className="notas-wraper">
+            <MobileNav />
+            <NavBar />
             <section className="notas">
                 <article className="notas-article-form">
                     <h3>Calculo para receita de pizzas</h3>
@@ -90,7 +93,6 @@ const Notas = () => {
                     </div>
                 </article>
             </section>
-            <NavBar />
         </main>
     )
 }

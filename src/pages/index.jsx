@@ -2,20 +2,23 @@ import NavBar from "../components/NavBar"
 import Hello from "../components/Hello"
 import Box from "../components/Box"
 import Prefix from "../helpers/Prefix"
+import MobileNav from "../components/MobileNav"
 
 const Home = () => {
     return (
         <main className="home-wraper">
+            <MobileNav />
+            <NavBar />
             <div className="home-principal">
                 <section>
                     <Hello />
-                    <div className="w-full h-auto flex mt-8 justtify-center items-start">
+                    <div className="home-component-wraper">
                         <img
                             src={`${Prefix}/me.jpg`}
                             alt="Picture of the author"
-                            className="z-0 rounded-md w-80 h-auto"
+                            className="home-image"
                         />
-                        <div className="w-auto h-auto px-6">
+                        <div className="home-text-wraper">
                             <p className="home-text-area">
                                 I'm a curious, creative and analityc person.
                                 Always researching for new knowledges, studing about
@@ -33,10 +36,6 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                    <span className="h-full"></span>
-                        <p className="home-text-area-out">
-                            This website was maded with NextJS, and deployed in Github pages.
-                        </p>
                 </section>
                 <aside>
                     <div className="home-box">
@@ -44,7 +43,6 @@ const Home = () => {
                     </div>
                 </aside>
             </div>
-            <NavBar />
         </main>
   )
 }
