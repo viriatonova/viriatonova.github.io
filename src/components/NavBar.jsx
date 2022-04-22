@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
-import CustomLoader from "../helpers/CustomLoader";
 import Prefix from "../helpers/Prefix"
 
 const NavBar = () => {
@@ -28,25 +26,19 @@ const NavBar = () => {
             <ul className="nav-social">
                 <li>
                     <a href="https://github.com/viriatonova" target="_blank">
-                        <Image
-                            loader={CustomLoader}
+                        <img
                             src={`${Prefix}/github.png`}
                             alt="Picture of the author"
-                            width={40}
-                            height={40}
-                            className="box-image"
+                            className="box-image w-10"
                         />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/viriato_nova/" target="_blank">
-                        <Image
-                            loader={CustomLoader}
+                        <img
                             src={`${Prefix}/instagram.png`}
                             alt="Picture of the author"
-                            width={30}
-                            height={30}
-                            className="box-image"
+                            className="box-image w-8"
                         />
                     </a>
                 </li>

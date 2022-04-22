@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar"
 import Hello from "../components/Hello"
-import ImageHome from "../components/ImageHome"
 import Box from "../components/Box"
+import Prefix from "../helpers/Prefix"
 
 const Home = () => {
     return (
@@ -10,8 +10,12 @@ const Home = () => {
                 <section>
                     <Hello />
                     <div className="w-full h-auto flex mt-8 justtify-center items-start">
-                        <ImageHome />
-                        <div className="w-1/2 h-auto">
+                        <img
+                            src={`${Prefix}/me.jpg`}
+                            alt="Picture of the author"
+                            className="z-0 rounded-md w-80 h-auto"
+                        />
+                        <div className="w-auto h-auto px-6">
                             <p className="home-text-area">
                                 I'm a curious, creative and analityc person.
                                 Always researching for new knowledges, studing about

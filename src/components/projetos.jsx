@@ -1,17 +1,12 @@
-import Image from "next/image"
-import CustomLoader from "../helpers/CustomLoader"
 import Prefix from "../helpers/Prefix"
 
 const Projetos = () => {
     return (
         <div className="projetos-wraper">
             <div className="projetos">
-                <Image
-                loader={CustomLoader}
+                <img
                 src={`${Prefix}/personalpage.png`}
                 alt="Picture of the author"
-                width={480}
-                height={270}
                 className=""
                 />
                 <h3>Personal Page</h3>
@@ -22,12 +17,9 @@ const Projetos = () => {
                 </p>
             </div>
             <div className="projetos">
-                <Image
-                loader={CustomLoader}
+                <img
                 src={`${Prefix}/stricto.png`}
                 alt="Picture of the author"
-                width={480}
-                height={270}
                 className=""
                 />
                 <h3>Stricto Digital</h3>
@@ -39,12 +31,9 @@ const Projetos = () => {
                 </p>
             </div>
             <div className="projetos">
-                <Image
-                loader={CustomLoader}
+                <img
                 src={`${Prefix}/megaterio.png`}
                 alt="Picture of the author"
-                width={480}
-                height={270}
                 className=""
                 />
                 <h3>Megaterio</h3>

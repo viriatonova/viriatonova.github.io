@@ -40,7 +40,7 @@
     }
 
     .home-text-area {
-        @apply w-full h-full ml-12
+        @apply w-full h-full
         text-lg font-light font-ibm-mono tracking-wide
         text-justify
     }
@@ -110,16 +110,6 @@
         font-ibm-sans font-semibold text-4xl tracking-wider
     }
 
-    /* IMAGE HOME */
-
-    .image-back {
-        @apply w-full h-full absolute bg-black top-1 left-2 z-10 rounded-md
-    }
-
-    .image-back-2 {
-        @apply w-full h-full absolute bg-gray-300 top-2 left-4 z-0 rounded-md
-    }
-
     /* BOX */
 
     .box-wraper {
@@ -129,7 +119,7 @@
     }
 
     .box {
-        @apply w-auto h-auto px-6 py-4
+        @apply w-auto h-auto px-4 py-2
         flex flex-col justify-center items-center
         border border-gray-800 rounded-md
     }
@@ -143,7 +133,7 @@
     }
 
     .box-image {
-        @apply rounded-md
+        @apply rounded-md w-24
     }
 
 
