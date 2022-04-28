@@ -20,15 +20,15 @@ const Home = () => {
                         />
                         <div className="home-text-wraper">
                             <p className="home-text-area">
-                                I'm a curious, creative and analityc person.
-                                Always researching for new knowledges, studing about
-                                any thing that open my mind
+                                I'm a curious, creative and analityc person,
+                                always researching for new information and experiences.
+                                I like to study about everything that opens my mind.
                             </p>
                             <p className="home-text-area mt-6">
                                 I started my carieer as project engineer in the
-                                civil construction but always stay in touch width
+                                civil construction but always stayed in touch with
                                 tecnology. In 2020 finally migrated to Web Development,
-                                where now I thing make me feel like "one with the force", as
+                                where now I think it makes me feel like "one with the force", as
                                 a geek that I ever was. :)
                             </p>
                             <p className="home-text-area mt-6">

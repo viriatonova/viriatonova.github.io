@@ -13,7 +13,7 @@ const Vtapps = () => {
                     />
                     <h3>Pizzas Calculator</h3>
                     <p>
-                        A form that automatize calculation of pizzas
+                        This is an app that automatize calculation of pizzas
                         based on supplies amount
                     </p>
                 </div>
@@ -27,8 +27,7 @@ const Vtapps = () => {
                     />
                     <h3>Password Generator</h3>
                     <p>
-                        Simple form for generate passwords
-                        on one click
+                        Simple form of generating passwords in one click
                     </p>
                 </div>
             </Link>
