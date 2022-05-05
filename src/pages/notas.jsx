@@ -23,11 +23,18 @@ const Notas = () => {
     const [valorFamilia, setValorFamilia] = useState(0);
     const [pesoMedia, setPesoMedia] = useState(0);
     const [valorMedia, setValorMedia] = useState(0);
+    const [inputPeso, setInputPeso] = useState(0);
+    const [inputValor, setInputValor] = useState(0);
 
     const handleClick = () => {
         setPeso(document.querySelector('.input-quantidade').value);
-        setValor(document.querySelector('.input-valor').value)
+        setValor(document.querySelector('.input-valor').value);
     }
+
+    const handleClear = (e) => {
+        setInputPeso("");
+        setInputValor("")
+    };
 
     useEffect(() => {
         const result = calcular(peso, valor);
@@ -48,15 +55,25 @@ const Notas = () => {
                         className="notas-form"
                     >
                         <div className="notas-input-wraper">
-                            <label to="nota">Peso do Produto</label>
-                            <input className="input-quantidade notas-input" type="text" name="nota"
-                            placeholder="ex.: 900 (Kg)"
+                            <label to="peso">Peso do Produto</label>
+                            <input
+                                className="input-quantidade notas-input" t
+                                ype="text"
+                                name="peso"
+                                placeholder="ex.: 900 (Kg)"
+                                onChange={ (e) => setInputPeso(e.target.value)}
+                                value={inputPeso}
                             />
                         </div>
                         <div className="notas-input-wraper mt-12">
-                            <label to="nota">Valor do Produto</label>
-                            <input className="input-valor notas-input" type="text" name="nota"
-                            placeholder="ex.: 6000 (R$)"
+                            <label to="valor">Valor do Produto</label>
+                            <input
+                                className="input-valor notas-input"
+                                type="text"
+                                name="valor"
+                                placeholder="ex.: 6000 (R$)"
+                                onChange={ (e) => setInputValor(e.target.value)}
+                                value={inputValor}
                             />
                         </div>
                         <div className="notas-button">
@@ -66,7 +83,12 @@ const Notas = () => {
                             >
                                 Calcular
                             </button>
-                            <button className="bt-clear contact">Limpar</button>
+                            <button
+                                onClick={handleClear}
+                                className="bt-clear contact"
+                                >
+                                Limpar
+                            </button>
                         </div>
                     </div>
                 </article>
