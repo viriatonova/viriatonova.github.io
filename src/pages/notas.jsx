@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react'
 import MobileNav from "../components/MobileNav"
 
 const calcular = (peso, valor) => {
-    const pesoMedia = (peso / 2) / 0.48;
-    const pesoFamilia = (peso / 2) / 0.84;
-    const valorMedia = valor/(2*pesoMedia) || 0;
-    const valorFamilia = valor/(2*pesoFamilia) || 0;
+    const pesoMedia = ((peso/2) * 100) / 48; 
+    const pesoFamilia = ((peso/2) * 100) / 84; 
+    const valorMedia = ((valor/2)*100)/(pesoMedia*100) || 0;
+    const valorFamilia = ((valor/2)*100)/(pesoFamilia*100) || 0;
 
     return {
         media: pesoMedia,
@@ -38,10 +38,10 @@ const Notas = () => {
 
     useEffect(() => {
         const result = calcular(peso, valor);
-        setPesoFamilia(result.familia.toFixed(0));
-        setValorFamilia(result.valorMedia.toFixed(2));
-        setPesoMedia(result.media.toFixed(0));
-        setValorMedia(result.valorFamilia.toFixed(2));
+        setPesoFamilia(result.familia);
+        setValorFamilia(result.valorFamilia);
+        setPesoMedia(result.media);
+        setValorMedia(result.valorMedia);
     })
 
     return (
