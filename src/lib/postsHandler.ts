@@ -6,7 +6,8 @@ export class PostsHandler {
   private contentDir: string;
 
   constructor() {
-    this.contentDir = path.join(process.cwd(), 'src', 'content');
+    const dirParts = [process.cwd(), 'src', 'content'];
+    this.contentDir = dirParts.join(path.sep);
   }
 
   /**
