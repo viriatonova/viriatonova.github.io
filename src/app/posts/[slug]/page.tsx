@@ -24,7 +24,7 @@ export default async function Page({
     return (
       <Container size="lg" pb="xl">
         <Group mb="xl">
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/" passHref>
             <Anchor c="dimmed">
               ← Voltar para a página inicial
             </Anchor>
