@@ -4,21 +4,6 @@ import '@mantine/core/styles.css';
 import { createTheme, Container, rem } from '@mantine/core';
 
 
-export const PROJECT_PATTERNS: Record<string, { width: number, height: number }> = {
-  icons: {
-    width: 22,
-    height: 22,
-  },
-  images: {
-    width: 128,
-    height: 128,
-  },
-  logos: {
-    width: 64,
-    height: 64,
-  },
-}
-
 const CONTAINER_SIZES: Record<string, number> = {
   sm: 400,
   md: 768,

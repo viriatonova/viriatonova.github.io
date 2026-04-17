@@ -6,7 +6,7 @@ import { useMantineColorScheme, useComputedColorScheme } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
-import { PROJECT_PATTERNS } from "@/theme";
+import { SITE_CONFIG } from "@/config/site";
 
 export function Header() {
   const [opened, { toggle, close }] = useDisclosure(false);
@@ -31,11 +31,12 @@ export function Header() {
       variant="default"
       size="lg"
       aria-label="Toggle color scheme"
+      visibleFrom="lg"
     >
       {computedColorScheme === "dark" ? (
-        <MoonIcon size={PROJECT_PATTERNS.icons.width} />
+        <MoonIcon size={SITE_CONFIG.icons.width} />
       ) : (
-        <SunIcon size={PROJECT_PATTERNS.icons.width} />
+        <SunIcon size={SITE_CONFIG.icons.width} />
       )}
     </ActionIcon>
   );
@@ -43,11 +44,6 @@ export function Header() {
   return (
     <Container size="lg" pt="xl">
       <Group justify="space-between" mb="40px" component="header" wrap="nowrap">
-        <Anchor component={Link} href="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <Title order={1} style={{ letterSpacing: "-1px" }}>
-            Viriato Nova
-          </Title>
-        </Anchor>
 
         {/* Desktop Menu */}
         <Group gap="md" visibleFrom="lg">
@@ -63,8 +59,8 @@ export function Header() {
               {link.label}
             </Anchor>
           ))}
-          <ThemeIcon />
         </Group>
+        <ThemeIcon />
 
         {/* Mobile Burger */}
         <Burger opened={opened} onClick={toggle} hiddenFrom="lg" size="sm" />
