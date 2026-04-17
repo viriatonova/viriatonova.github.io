@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
 };
 
-const withMDX = createMDX({});
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
 
 export default withMDX(nextConfig);
