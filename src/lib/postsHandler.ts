@@ -32,14 +32,31 @@ export class PostsHandler {
     return { metadata, content };
   }
 
+  private parseDate(dateStr: string | undefined): number {
+    if (!dateStr) return 0;
+    const months: Record<string, number> = {
+      'janeiro': 0, 'fevereiro': 1, 'março': 2, 'abril': 3, 'maio': 4, 'junho': 5,
+      'julho': 6, 'agosto': 7, 'setembro': 8, 'outubro': 9, 'novembro': 10, 'dezembro': 11
+    };
+    
+    const match = dateStr.match(/(\d{1,2})\s+de\s+([A-Za-zçÇ]+)(?:,?\s+)?(\d{4})/i);
+    if (!match) return new Date(dateStr).getTime() || 0;
+    
+    const day = parseInt(match[1], 10);
+    const monthStr = match[2].toLowerCase();
+    const month = months[monthStr] ?? 0;
+    const year = parseInt(match[3], 10);
+    return new Date(year, month, day).getTime();
+  }
+
   public getAllPosts(): PostProps[] {
     if (!fs.existsSync(this.contentDir)) return [];
 
     const files = fs.readdirSync(this.contentDir);
 
     return files
-      .filter((file) => file.endsWith('.mdx'))
-      .map((fileName) => {
+      .filter((file: string) => file.endsWith('.mdx'))
+      .map((fileName: string) => {
         const filePath = path.join(this.contentDir, fileName);
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const slug = fileName.replace(/\.mdx$/, '');
@@ -53,7 +70,8 @@ export class PostsHandler {
           description: metadata.description || '',
           content,
         };
-      });
+      })
+      .sort((a: PostProps, b: PostProps) => this.parseDate(b.date) - this.parseDate(a.date));
   }
 
   public getPaginatedPosts(page: number = 1, limit: number = 6): PaginatedPosts {
@@ -83,6 +101,35 @@ export class PostsHandler {
       tag: metadata.tag || '',
       description: metadata.description || '',
       content,
+    };
+  }
+
+  public getAllTags(): string[] {
+    const posts = this.getAllPosts();
+    const tags = new Set<string>();
+    posts.forEach(post => {
+      if (post.tag) {
+        tags.add(post.tag);
+      }
+    });
+    return Array.from(tags).sort();
+  }
+
+  public getPaginatedPostsByTag(tag: string, page: number = 1, limit: number = 6): PaginatedPosts {
+    const decodedTag = tag.toLowerCase();
+    const allPosts = this.getAllPosts().filter(p => 
+      p.tag.toLowerCase() === decodedTag || 
+      p.tag.toLowerCase().replace(/ /g, '-') === decodedTag
+    );
+    
+    const startIndex = (page - 1) * limit;
+    const paginatedPosts = allPosts.slice(startIndex, startIndex + limit);
+
+    return {
+      posts: paginatedPosts,
+      totalPages: Math.ceil(allPosts.length / limit),
+      currentPage: page,
+      totalPosts: allPosts.length,
     };
   }
 }
