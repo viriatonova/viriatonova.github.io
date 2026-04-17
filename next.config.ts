@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   output: "export",
@@ -10,11 +9,12 @@ const nextConfig: NextConfig = {
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactCompiler: true,
-  experimental: {
-    mdxRs: true,
-  },
 };
 
-const withMDX = createMDX({});
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-frontmatter"],
+  },
+});
 
 export default withMDX(nextConfig);

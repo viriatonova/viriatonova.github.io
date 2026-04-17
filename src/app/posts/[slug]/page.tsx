@@ -18,8 +18,12 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
+  const handler = new PostsHandler();
+  const post = handler.getPostBySlug(slug);
+  if (!post) notFound();
+
   try {
-    const { default: PostContent, metadata } = await import(`@/content/${slug}.mdx`);
+    const { default: PostContent } = await import(`@/content/${slug}.mdx`);
 
     return (
       <Container size="lg" pb="xl">
@@ -31,16 +35,16 @@ export default async function Page({
           </Link>
         </Group>
         <Post
-          title={metadata?.title || "Sem título"}
-          date={metadata?.date || ""}
-          tag={metadata?.tag || ""}
-          description={metadata?.description}
+          title={post.title}
+          date={post.date}
+          tag={post.tag}
+          description={post.description}
         >
           <PostContent />
         </Post>
       </Container>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }

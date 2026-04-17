@@ -10,102 +10,71 @@ export class PostsHandler {
     this.contentDir = dirParts.join(path.sep);
   }
 
-  /**
-   * Helper privately used to parse the JS metadata export from MDX files
-   */
-  private parseMetadata(fileContent: string): Partial<PostProps> {
-    const metadataMatch = fileContent.match(/export const metadata = {([\s\S]*?)};/);
-    if (!metadataMatch) return {};
+  private parseFrontmatter(fileContent: string): { metadata: Partial<PostProps>; content: string } {
+    const match = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+    if (!match) return { metadata: {}, content: fileContent.trim() };
 
-    const metadataStr = metadataMatch[1];
+    const frontmatter = match[1];
+    const content = match[2].trim();
+    const metadata: Partial<PostProps> = {};
 
-    const titleMatch = metadataStr.match(/title:\s*["']([\s\S]*?)["']/);
-    const dateMatch = metadataStr.match(/date:\s*["']([\s\S]*?)["']/);
-    const tagMatch = metadataStr.match(/tag:\s*["']([\s\S]*?)["']/);
-    const descMatch = metadataStr.match(/description:\s*["']([\s\S]*?)["']/);
-
-    return {
-      title: titleMatch ? titleMatch[1] : '',
-      date: dateMatch ? dateMatch[1] : '',
-      tag: tagMatch ? tagMatch[1] : '',
-      description: descMatch ? descMatch[1] : '',
-    };
-  }
-
-  /**
-   * Retrieves all posts from the MDX content directory.
-   */
-  public getAllPosts(): PostProps[] {
-    if (!fs.existsSync(this.contentDir)) {
-      return [];
+    for (const line of frontmatter.split('\n')) {
+      const colonIdx = line.indexOf(':');
+      if (colonIdx === -1) continue;
+      const key = line.slice(0, colonIdx).trim();
+      const value = line.slice(colonIdx + 1).trim().replace(/^["']|["']$/g, '');
+      if (key === 'title') metadata.title = value;
+      else if (key === 'date') metadata.date = value;
+      else if (key === 'tag') metadata.tag = value;
+      else if (key === 'description') metadata.description = value;
     }
 
-    const files = fs.readdirSync(this.contentDir);
-    const mdxFiles = files.filter((file) => file.endsWith('.mdx'));
-
-    const posts: PostProps[] = mdxFiles.map((fileName) => {
-      const filePath = path.join(this.contentDir, fileName);
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-
-      const slug = fileName.replace(/\.mdx$/, '');
-      const metadata = this.parseMetadata(fileContent);
-
-      // Clean content by removing the metadata export
-      const content = fileContent.replace(/export const metadata = {[\s\S]*?};/, '').trim();
-
-      return {
-        slug,
-        title: metadata.title || slug,
-        date: metadata.date || '',
-        tag: metadata.tag || '',
-        description: metadata.description || '',
-        content,
-      };
-    });
-
-    // Optionally sort posts here, e.g. based on date string if they are uniform 
-    // In this case, we rely on the order in the filesystem or return as is
-
-    return posts;
+    return { metadata, content };
   }
 
-  /**
-   * Retrieves a paginated unpaginated list of posts.
-   * @param page Current page (1-indexed)
-   * @param limit Items per page
-   */
+  public getAllPosts(): PostProps[] {
+    if (!fs.existsSync(this.contentDir)) return [];
+
+    const files = fs.readdirSync(this.contentDir);
+
+    return files
+      .filter((file) => file.endsWith('.mdx'))
+      .map((fileName) => {
+        const filePath = path.join(this.contentDir, fileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const slug = fileName.replace(/\.mdx$/, '');
+        const { metadata, content } = this.parseFrontmatter(fileContent);
+
+        return {
+          slug,
+          title: metadata.title || slug,
+          date: metadata.date || '',
+          tag: metadata.tag || '',
+          description: metadata.description || '',
+          content,
+        };
+      });
+  }
+
   public getPaginatedPosts(page: number = 1, limit: number = 6): PaginatedPosts {
     const allPosts = this.getAllPosts();
-
-    // Calculate pagination offsets
     const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-
-    const paginatedPosts = allPosts.slice(startIndex, endIndex);
-    const totalPages = Math.ceil(allPosts.length / limit);
+    const paginatedPosts = allPosts.slice(startIndex, startIndex + limit);
 
     return {
       posts: paginatedPosts,
-      totalPages,
+      totalPages: Math.ceil(allPosts.length / limit),
       currentPage: page,
       totalPosts: allPosts.length,
     };
   }
 
-  /**
-   * Retrieves a single post by its slug.
-   * @param slug Post identifier without extension
-   */
   public getPostBySlug(slug: string): PostProps | null {
     const filePath = path.join(this.contentDir, `${slug}.mdx`);
-
-    if (!fs.existsSync(filePath)) {
-      return null;
-    }
+    if (!fs.existsSync(filePath)) return null;
 
     const fileContent = fs.readFileSync(filePath, 'utf8');
-    const metadata = this.parseMetadata(fileContent);
-    const content = fileContent.replace(/export const metadata = {[\s\S]*?};/, '').trim();
+    const { metadata, content } = this.parseFrontmatter(fileContent);
 
     return {
       slug,
